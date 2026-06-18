@@ -3,25 +3,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZeroG — The Mobile Companion for Antigravity</title>
-  <meta name="description" content="ZeroG is the official mobile companion for Antigravity. Send commands to your AI agent, get real-time responses, and stay in flow — from anywhere in the world." />
+  <title>ZeroG — Your Antigravity Agent, In Your Pocket</title>
+  <meta name="description" content="ZeroG is the mobile remote for the Antigravity AI IDE. Send commands to your AI agent, watch the terminal live, and stay in flow — from your phone, anywhere." />
+  <meta property="og:title" content="ZeroG — Your Antigravity Agent, In Your Pocket" />
+  <meta property="og:description" content="The mobile remote for the Antigravity AI IDE. Command your agent from anywhere." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #04040c; --surface: rgba(255,255,255,0.04); --surface-2: rgba(255,255,255,0.07);
+  --border: rgba(255,255,255,0.08); --text: #f1f5f9; --text-2: rgba(241,245,249,0.62);
+  --muted: rgba(241,245,249,0.34); --accent: #2dd4bf; --accent-2: #67e8f9; --violet: #8b5cf6;
+  --accent-glow: rgba(45,212,191,0.30); --green: #22c55e;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); background: rgba(4,4,12,0.72); }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-mark { width: 40px; height: 40px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 21px; color: #04040c; box-shadow: 0 0 24px var(--accent-glow), 0 1px 0 rgba(255,255,255,0.25) inset; letter-spacing: -1px; }
+.logo-text { font-size: 21px; font-weight: 900; color: var(--text); letter-spacing: -0.8px; }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+.nav-cta { background: var(--surface-2); border: 1px solid var(--border); color: var(--text) !important; padding: 8px 18px; border-radius: 9px; font-weight: 600 !important; transition: border-color 0.2s, background 0.2s !important; }
+.nav-cta:hover { border-color: var(--accent) !important; background: rgba(45,212,191,0.1) !important; }
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: space-between; gap: 56px; max-width: 1100px; margin: 0 auto; padding: 130px 24px 80px; position: relative; }
+.hero-bg { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+.grid-overlay { position: absolute; inset: 0; background-image: linear-gradient(rgba(45,212,191,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(45,212,191,0.045) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent); -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black, transparent); }
+.glow { position: absolute; border-radius: 50%; filter: blur(110px); pointer-events: none; }
+.glow-1 { width: 600px; height: 420px; top: -120px; left: -120px; background: radial-gradient(circle, rgba(45,212,191,0.16) 0%, transparent 70%); }
+.glow-2 { width: 520px; height: 420px; top: 120px; right: -80px; background: radial-gradient(circle, rgba(103,232,249,0.12) 0%, transparent 70%); }
+.glow-3 { width: 800px; height: 400px; top: 50%; left: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(45,212,191,0.14) 0%, transparent 70%); }
+.hero-content { flex: 1; max-width: 560px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(45,212,191,0.1); border: 1px solid rgba(45,212,191,0.25); border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.3px; margin-bottom: 26px; }
+.badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+.hero-title { font-size: clamp(44px, 6vw, 74px); font-weight: 900; line-height: 1.04; letter-spacing: -2.5px; margin-bottom: 22px; color: var(--text); }
+.gradient-text { background: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-sub { font-size: 18px; line-height: 1.65; color: var(--text-2); margin-bottom: 36px; font-weight: 400; max-width: 500px; }
+.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 26px; }
+.hero-stores { display: flex; gap: 12px; flex-wrap: wrap; }
+.store-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; padding: 8px 14px; font-size: 13px; font-weight: 600; color: var(--text-2); cursor: default; }
+.store-badge.muted { color: var(--muted); }
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--accent), #14b8a6); color: #04241f; font-size: 15px; font-weight: 800; padding: 14px 26px; border-radius: 12px; text-decoration: none; box-shadow: 0 4px 28px var(--accent-glow), 0 1px 0 rgba(255,255,255,0.25) inset; transition: transform 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 36px var(--accent-glow); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 8px; color: var(--text-2); font-size: 15px; font-weight: 600; text-decoration: none; padding: 14px 4px; transition: color 0.2s; }
+.btn-secondary:hover { color: var(--text); }
+.btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--surface-2); border: 1px solid var(--border); color: var(--text); font-size: 15px; font-weight: 700; padding: 13px 26px; border-radius: 12px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+.btn-outline:hover { border-color: var(--accent); background: rgba(45,212,191,0.08); }
+.btn-block { width: 100%; }
+.btn-lg { font-size: 17px; padding: 18px 32px; border-radius: 14px; }
+.btn-sub { font-size: 11px; font-weight: 600; opacity: 0.75; margin-left: 4px; }
+.hero-phone { flex-shrink: 0; width: 300px; }
+.phone-frame { background: linear-gradient(145deg, #1c1c2e, #131322); border-radius: 46px; padding: 11px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 40px 90px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.05) inset, 0 60px 120px rgba(45,212,191,0.12); }
+.phone-app { background: #03030d; border-radius: 36px; padding: 14px 13px 10px; overflow: hidden; display: flex; flex-direction: column; gap: 11px; }
+.app-statusbar { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; color: var(--text); padding: 4px 6px 0; }
+.sb-icons { font-size: 9px; color: var(--text-2); letter-spacing: 1px; }
+.app-header { display: flex; align-items: center; gap: 10px; padding: 2px 4px; }
+.app-logo { width: 34px; height: 34px; border-radius: 10px; background: var(--accent); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 18px; }
+.app-title { font-size: 15px; font-weight: 800; color: var(--text); }
+.app-subtitle { font-size: 10px; color: var(--muted); letter-spacing: 0.5px; }
+.app-hero-card { background: #0f0f1e; border: 1px solid var(--border); border-radius: 16px; padding: 15px; }
+.ahc-title { font-size: 19px; font-weight: 900; color: var(--text); }
+.ahc-sub { font-size: 11px; color: var(--text-2); margin-bottom: 12px; }
+.ahc-stats { display: flex; gap: 8px; }
+.stat { flex: 1; border-radius: 9px; padding: 9px 8px; }
+.stat b { display: block; font-size: 16px; font-weight: 900; }
+.stat span { font-size: 9px; color: var(--muted); }
+.stat-teal { background: rgba(45,212,191,0.12); } .stat-teal b { color: var(--accent); }
+.stat-violet { background: rgba(139,92,246,0.12); } .stat-violet b { color: var(--violet); }
+.stat-green { background: rgba(34,197,94,0.12); } .stat-green b { color: var(--green); }
+.app-card { background: #0f0f1e; border: 1px solid var(--border); border-radius: 16px; padding: 13px 15px; }
+.app-card-label { font-size: 9px; font-weight: 800; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 9px; }
+.status-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-2); padding: 7px 0; border-bottom: 1px solid var(--border); }
+.status-row.no-border { border-bottom: none; }
+.status-row b { font-size: 11px; font-weight: 800; }
+.t-teal { color: var(--accent); } .t-violet { color: var(--violet); } .t-green { color: var(--green); }
+.app-tabs { display: flex; margin-top: auto; padding-top: 8px; border-top: 1px solid var(--border); }
+.tab { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 9px; font-weight: 800; letter-spacing: 0.6px; color: var(--muted); }
+.tab span { font-size: 16px; }
+.tab.active { color: var(--accent); }
+.tab-z { width: 22px; height: 22px; border-radius: 7px; background: var(--accent); color: #000; font-size: 12px !important; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+.section { padding: 100px 24px; }
+.section-dark { background: rgba(255,255,255,0.018); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--accent); margin-bottom: 14px; }
+.section-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -1px; color: var(--text); margin-bottom: 54px; }
+.steps { display: flex; align-items: stretch; gap: 0; }
+.step { flex: 1; padding: 34px 30px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+.step:hover { background: var(--surface-2); border-color: rgba(45,212,191,0.3); transform: translateY(-3px); }
+.step-num { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--accent); margin-bottom: 14px; }
+.step-icon { font-size: 30px; margin-bottom: 14px; }
+.step h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; color: var(--text); }
+.step p { font-size: 14px; line-height: 1.7; color: var(--text-2); }
+.step-arrow { font-size: 24px; color: var(--muted); padding: 80px 16px 0; flex-shrink: 0; }
+.showcase { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.showcase-item { text-align: center; }
+.mini-phone { background: linear-gradient(145deg, #1c1c2e, #131322); border-radius: 28px; padding: 7px; margin: 0 auto 22px; max-width: 220px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 24px 50px rgba(0,0,0,0.5), 0 30px 70px rgba(45,212,191,0.08); }
+.mp-screen { background: #03030d; border-radius: 22px; padding: 14px 12px; min-height: 260px; display: flex; flex-direction: column; gap: 8px; text-align: left; }
+.mp-header { display: flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 800; color: var(--text); padding-bottom: 9px; border-bottom: 1px solid var(--border); }
+.mp-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
+.mp-bubble { font-size: 11px; line-height: 1.45; padding: 8px 11px; border-radius: 13px; max-width: 85%; }
+.mp-bubble.agent { background: var(--surface-2); border: 1px solid var(--border); color: var(--text-2); align-self: flex-start; border-bottom-left-radius: 3px; }
+.mp-bubble.user { background: linear-gradient(135deg, var(--accent), #14b8a6); color: #04241f; font-weight: 600; align-self: flex-end; border-bottom-right-radius: 3px; }
+.mp-term { display: flex; flex-direction: column; gap: 5px; font-family: 'SF Mono', ui-monospace, monospace; }
+.tl { font-size: 11px; } .tl.cmd { color: #a5b4fc; } .tl.out { color: var(--text-2); } .tl.ok { color: var(--green); }
+.mp-hero { background: #0f0f1e; border: 1px solid var(--border); border-radius: 12px; padding: 11px; }
+.mp-hero b { display: block; font-size: 15px; font-weight: 900; color: var(--text); }
+.mp-hero span { font-size: 10px; color: var(--text-2); }
+.mp-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-2); padding: 6px 2px; border-bottom: 1px solid var(--border); }
+.mp-row b { font-size: 11px; font-weight: 800; }
+.showcase-item h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.showcase-item p { font-size: 14px; line-height: 1.6; color: var(--text-2); max-width: 280px; margin: 0 auto; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.feature-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 30px; transition: border-color 0.2s, transform 0.2s; }
+.feature-card:hover { border-color: rgba(45,212,191,0.3); transform: translateY(-4px); }
+.feature-icon { font-size: 28px; margin-bottom: 14px; }
+.feature-card h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.feature-card p { font-size: 14px; line-height: 1.7; color: var(--text-2); }
+.pricing-intro { font-size: 17px; color: var(--text-2); margin: -38px 0 48px; }
+.pricing { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: stretch; max-width: 760px; margin: 0 auto; }
+.price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 32px 28px; display: flex; flex-direction: column; position: relative; transition: border-color 0.2s, transform 0.2s; }
+.price-card:hover { transform: translateY(-4px); border-color: rgba(45,212,191,0.25); }
+.price-card.featured { border-color: rgba(45,212,191,0.5); background: linear-gradient(180deg, rgba(45,212,191,0.07), var(--surface)); }
+.price-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04241f; font-size: 11px; font-weight: 800; letter-spacing: 0.5px; padding: 5px 14px; border-radius: 999px; }
+.price-name { font-size: 15px; font-weight: 700; color: var(--accent); letter-spacing: 0.5px; margin-bottom: 10px; }
+.price-amount { font-size: 44px; font-weight: 900; color: var(--text); letter-spacing: -1.5px; margin-bottom: 8px; }
+.price-amount span { font-size: 15px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+.price-desc { font-size: 14px; color: var(--text-2); line-height: 1.5; margin-bottom: 22px; }
+.price-feats { list-style: none; margin-bottom: 26px; flex: 1; }
+.price-feats li { font-size: 14px; color: var(--text-2); padding: 7px 0 7px 26px; position: relative; }
+.price-feats li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 900; }
+.pricing-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 28px; }
+.download-card { background: var(--surface); border: 1px solid var(--border); border-radius: 28px; padding: 72px 60px; text-align: center; position: relative; overflow: hidden; }
+.download-sub { font-size: 18px; color: var(--text-2); margin: -38px 0 38px; line-height: 1.6; }
+.download-actions { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+.download-note { font-size: 13px; color: var(--muted); }
+.built-for-section { padding: 24px; border-bottom: 1px solid var(--border); }
+.built-for-card { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 24px; background: linear-gradient(135deg, rgba(45,212,191,0.08), rgba(103,232,249,0.05)); border: 1px solid rgba(45,212,191,0.2); border-radius: 20px; padding: 26px 36px; flex-wrap: wrap; }
+.built-for-logo { font-size: 34px; flex-shrink: 0; }
+.built-for-text { flex-shrink: 0; }
+.built-for-label { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; color: var(--accent); margin-bottom: 4px; }
+.built-for-name { font-size: 24px; font-weight: 900; background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -0.5px; }
+.built-for-desc { flex: 1; font-size: 15px; line-height: 1.6; color: var(--text-2); border-left: 1px solid var(--border); padding-left: 28px; min-width: 260px; }
+.footer { padding: 40px 24px; border-top: 1px solid var(--border); }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-copy { font-size: 13px; color: var(--muted); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--text-2); }
+.footer-disclaimer { font-size: 11px; color: var(--muted); text-align: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto; }
+.legal-section { min-height: 100vh; padding: 120px 24px 80px; }
+.legal-container { max-width: 760px; margin: 0 auto; }
+.legal-header { margin-bottom: 48px; }
+.legal-title { font-size: 40px; font-weight: 900; letter-spacing: -1px; color: var(--text); margin-bottom: 8px; }
+.legal-date { font-size: 13px; color: var(--muted); }
+.legal-body h2 { font-size: 18px; font-weight: 700; color: var(--text); margin: 36px 0 12px; }
+.legal-body p { font-size: 15px; line-height: 1.8; color: var(--text-2); margin-bottom: 12px; }
+.legal-body ul { padding-left: 24px; margin-bottom: 12px; }
+.legal-body li { font-size: 15px; line-height: 1.8; color: var(--text-2); margin-bottom: 4px; }
+.legal-body a { color: var(--accent-2); text-decoration: underline; }
+@media (max-width: 900px) {
+  .hero { flex-direction: column; align-items: flex-start; padding-top: 110px; gap: 48px; }
+  .hero-phone { width: 280px; align-self: center; }
+  .steps { flex-direction: column; gap: 12px; } .step-arrow { display: none; }
+  .showcase { grid-template-columns: 1fr; gap: 40px; }
+  .features { grid-template-columns: 1fr 1fr; }
+  .pricing { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; gap: 24px; }
+  .price-card.featured { order: -1; }
+  .download-card { padding: 48px 28px; }
+}
+@media (max-width: 600px) {
+  .features { grid-template-columns: 1fr; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero-title { letter-spacing: -1.5px; }
+  .built-for-desc { border-left: none; padding-left: 0; }
+}
+  </style>
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-inner">
-      <div class="nav-logo">
+      <a href="#" class="nav-logo">
         <span class="logo-mark">Z</span>
         <span class="logo-text">ZeroG</span>
-      </div>
+      </a>
       <div class="nav-links">
         <a href="#how">How it works</a>
         <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/connect.html">Setup</a>
         <a href="#download" class="nav-cta">Download</a>
       </div>
     </div>
@@ -35,68 +211,75 @@
       <div class="glow glow-2"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-brand">
-        <div class="hero-brand-mark">Z</div>
-        <span class="hero-brand-name">ZeroG</span>
-      </div>
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Mobile companion for Antigravity users
+        Built exclusively for Antigravity
       </div>
       <h1 class="hero-title">
-        Antigravity<br/>
-        <span class="gradient-text">In Your Pocket</span>
+        Your AI agent,<br/>
+        <span class="gradient-text">in your pocket</span>
       </h1>
       <p class="hero-sub">
-        ZeroG is built exclusively for Antigravity users.<br/>
-        Send commands to your AI agent, get real-time responses,<br/>
-        and stay in flow — from your phone, anywhere in the world.
+        Antigravity is desktop-only — so ZeroG is the one way to take it mobile.
+        Fire off commands, watch the terminal stream live, and get real-time AI
+        responses on your phone, from anywhere in the world.
       </p>
       <div class="hero-actions">
-        <a href="https://github.com/theanxioustrader/zerog-desktop/releases/download/v1.0.0/ZeroG-Desktop-Setup-1.0.0.exe" class="btn-primary" id="hero-download-btn">
+        <a href="/ZeroG-for-Antigravity.vsix" class="btn-primary" id="hero-download-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download for Windows
+          Add to Antigravity
         </a>
-        <a href="https://zerog-mobile.pages.dev" class="btn-secondary" target="_blank">
-          Open Web App →
-        </a>
+        <a href="#how" class="btn-secondary">See how it works →</a>
       </div>
       <div class="hero-stores">
         <span class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          App Store
+          iOS · TestFlight
         </span>
-        <span class="store-badge">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.16.65.19.98.09l12.76-7.37-2.74-2.74-11 10.02zm16.25-11.06L16.76 11l-13.6-7.85c-.36-.21-.77-.23-1.14-.09L14.69 14.7l4.74-2z"/><path d="m2.02 3.15-.01.01C1.7 3.42 1.5 3.85 1.5 4.39v15.19c0 .54.2.98.52 1.24l.07.06 8.52-8.52v-.2L2.02 3.15z"/><path d="m22.42 10.56-3.01-1.73-3.39 3.39 3.39 3.39 3.02-1.74c.86-.5.86-1.82-.01-2.31z"/></svg>
-          Google Play
-        </span>
+        <span class="store-badge muted">Android soon</span>
       </div>
     </div>
+
+    <!-- REAL APP MOCKUP — ZeroG Mission Control -->
     <div class="hero-phone">
       <div class="phone-frame">
-        <div class="phone-screen">
-          <div class="phone-header">
-            <div class="phone-status-dot online"></div>
-            <span>ZeroG Remote</span>
-            <span class="phone-time">9:41</span>
+        <div class="phone-app">
+          <div class="app-statusbar">
+            <span>9:41</span>
+            <span class="sb-icons">●●● ＷｉＦｉ ▮</span>
           </div>
-          <div class="phone-msg agent">
-            ⚡ Antigravity Agent connected.<br/>Ready for your commands.
+          <div class="app-header">
+            <div class="app-logo">Z</div>
+            <div>
+              <div class="app-title">ZeroG</div>
+              <div class="app-subtitle">Mission Control</div>
+            </div>
           </div>
-          <div class="phone-msg user">
-            Audit the codebase for errors
+          <div class="app-hero-card">
+            <div class="ahc-title">ZeroG Agent</div>
+            <div class="ahc-sub">AI-powered command center</div>
+            <div class="ahc-stats">
+              <div class="stat stat-teal"><b>AI</b><span>Model</span></div>
+              <div class="stat stat-violet"><b>v2</b><span>Version</span></div>
+              <div class="stat stat-green"><b>ON</b><span>Status</span></div>
+            </div>
           </div>
-          <div class="phone-msg agent typing">
-            <span class="typing-dot"></span>
-            <span class="typing-dot"></span>
-            <span class="typing-dot"></span>
+          <div class="app-card">
+            <div class="app-card-label">AGENT STATUS</div>
+            <div class="status-row"><span>🧠 Agent connected</span><b class="t-violet">Active</b></div>
+            <div class="status-row"><span>💻 Commands enabled</span><b class="t-teal">Ready</b></div>
+            <div class="status-row no-border"><span>🔗 Relay connected</span><b class="t-green">Live</b></div>
+          </div>
+          <div class="app-tabs">
+            <div class="tab"><span>💼</span>CHAT</div>
+            <div class="tab"><span>⚡</span>TERMINAL</div>
+            <div class="tab active"><span class="tab-z">Z</span>MISSION</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <!-- ANTIGRAVITY BADGE -->
   <section class="built-for-section">
     <div class="container">
@@ -111,37 +294,89 @@
     </div>
   </section>
 
+  <!-- HOW IT WORKS -->
   <section class="section" id="how">
     <div class="container">
       <div class="section-label">HOW IT WORKS</div>
-      <h2 class="section-title">Up and running in minutes</h2>
+      <h2 class="section-title">Paired in under a minute</h2>
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
           <div class="step-icon">⬇️</div>
-          <h3>Install on your PC</h3>
-          <p>Download the ZeroG companion app. It installs silently and runs in the background — no configuration needed.</p>
+          <h3>Add ZeroG to Antigravity</h3>
+          <p>Download the ZeroG extension and install it in Antigravity (Extensions → Install from VSIX). It lives right inside the IDE — no separate app to run.</p>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-icon">📱</div>
           <h3>Scan the QR code</h3>
-          <p>Open the ZeroG app on your phone and scan the pairing QR code shown on first launch. Done in seconds.</p>
+          <p>Open ZeroG on your phone and scan the secure pairing code your PC displays. Your phone and desktop are now linked.</p>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
           <div class="step-num">03</div>
           <div class="step-icon">🚀</div>
-          <h3>Control from anywhere</h3>
-          <p>Send messages, run macros, and receive AI responses directly on your phone in real time.</p>
+          <h3>Command from anywhere</h3>
+          <p>Send messages, run terminal commands, and watch AI responses stream back to your phone in real time.</p>
         </div>
+      </div>
+      <div style="text-align:center; margin-top:38px;">
+        <a href="/connect.html" style="color:#2dd4bf; text-decoration:none; font-weight:600; font-size:15px;">Full setup guide &amp; FAQ →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE — real app screens -->
+  <section class="section section-dark" id="showcase">
+    <div class="container">
+      <div class="section-label">THE APP</div>
+      <h2 class="section-title">Your whole workflow, on a phone</h2>
+      <div class="showcase">
+
+        <div class="showcase-item">
+          <div class="mini-phone">
+            <div class="mp-screen">
+              <div class="mp-header"><span class="mp-dot"></span>Chat</div>
+              <div class="mp-bubble agent">Antigravity agent connected. Ready for your commands.</div>
+              <div class="mp-bubble user">Audit the codebase for errors</div>
+              <div class="mp-bubble agent">Scanning 142 files… found 3 issues. Want me to fix them?</div>
+            </div>
+          </div>
+          <h3>Chat</h3>
+          <p>Talk to your Antigravity agent in natural language. Responses stream back live.</p>
+        </div>
+
+        <div class="showcase-item">
+          <div class="mini-phone">
+            <div class="mp-screen">
+              <div class="mp-header"><span class="mp-dot"></span>Terminal</div>
+              <div class="mp-term"><span class="tl cmd">$ npm run build</span><span class="tl out">› compiling…</span><span class="tl ok">✓ built in 4.1s</span><span class="tl cmd">$ git status</span><span class="tl out">nothing to commit</span></div>
+            </div>
+          </div>
+          <h3>Terminal</h3>
+          <p>Run real commands on your PC and watch stdout, stderr, and exit codes stream in.</p>
+        </div>
+
+        <div class="showcase-item">
+          <div class="mini-phone">
+            <div class="mp-screen">
+              <div class="mp-header"><span class="mp-dot"></span>Mission</div>
+              <div class="mp-hero"><b>ZeroG Agent</b><span>AI command center</span></div>
+              <div class="mp-row"><span>🧠 Agent</span><b class="t-violet">Active</b></div>
+              <div class="mp-row"><span>🔗 Relay</span><b class="t-green">Live</b></div>
+            </div>
+          </div>
+          <h3>Mission Control</h3>
+          <p>A live dashboard of your agent, commands, and relay — connection status at a glance.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- FEATURES -->
-  <section class="section section-dark" id="features">
+  <section class="section" id="features">
     <div class="container">
       <div class="section-label">FEATURES</div>
       <h2 class="section-title">Everything Antigravity users need</h2>
@@ -149,34 +384,75 @@
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
           <h3>Native Antigravity integration</h3>
-          <p>Messages inject directly into Antigravity's chat interface and AI responses stream back to your phone in real time.</p>
+          <p>Messages inject straight into Antigravity's chat, and AI responses stream back to your phone in real time.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <h3>Mission macros</h3>
-          <p>One-tap shortcuts for common commands — audit code, build apps, analyze context — right from your homescreen.</p>
+          <div class="feature-icon">⌨️</div>
+          <h3>Live terminal</h3>
+          <p>Fire off commands on your PC and watch the output stream in — stdout, errors, and exit codes, line by line.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔒</div>
           <h3>Private by design</h3>
-          <p>Your AI runs on your own machine. ZeroG is just the bridge — your data never touches a third-party server.</p>
+          <p>Your AI model and your code stay on your own machine. ZeroG runs nothing on our servers but the encrypted relay that links your phone to your PC.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌐</div>
-          <h3>Works everywhere</h3>
-          <p>iOS, Android, or browser. As long as your PC is on, you're connected — at home, at work, or on the go.</p>
+          <h3>Works anywhere</h3>
+          <p>On Wi-Fi or cellular, at home or on the go. As long as your PC is on, your agent is a tap away.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">💬</div>
-          <h3>Multi-conversation</h3>
-          <p>Switch between multiple AI conversations from your phone. Each one routes to the right context automatically.</p>
+          <div class="feature-icon">🔗</div>
+          <h3>Direct IDE connection</h3>
+          <p>ZeroG links straight to your running Antigravity session — what you send drops right into the IDE, and the agent's replies come straight back to your phone.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔄</div>
-          <h3>Always connected</h3>
-          <p>Auto-reconnect, missed message queuing, and offline buffering keep you in sync even on spotty connections.</p>
+          <h3>Always in sync</h3>
+          <p>Auto-reconnect, missed-message recovery, and offline buffering keep you synced even on spotty connections.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section section-dark" id="pricing">
+    <div class="container">
+      <div class="section-label">PRICING</div>
+      <h2 class="section-title">Simple, honest pricing</h2>
+      <p class="pricing-intro">Start free. Upgrade when ZeroG becomes part of how you work.</p>
+      <div class="pricing">
+
+        <div class="price-card">
+          <div class="price-name">Free</div>
+          <div class="price-amount">$0<span>/forever</span></div>
+          <p class="price-desc">Full access, supported by ads.</p>
+          <ul class="price-feats">
+            <li>Chat &amp; live terminal</li>
+            <li>Real-time relay</li>
+            <li>1 paired device</li>
+            <li>Shows an ad every 10 messages</li>
+            <li>Community support</li>
+          </ul>
+          <a href="/ZeroG-for-Antigravity.vsix" class="btn-outline btn-block">Get started free</a>
+        </div>
+
+        <div class="price-card featured">
+          <div class="price-badge">Most popular</div>
+          <div class="price-name">Pro</div>
+          <div class="price-amount">$14.99<span>/month</span></div>
+          <p class="price-desc">For developers who live in Antigravity.</p>
+          <ul class="price-feats">
+            <li>No ads, ever</li>
+            <li>Unlimited devices</li>
+            <li>Priority relay &amp; speed</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="mailto:hello@zerog-ai.com?subject=ZeroG%20Pro" class="btn-primary btn-block" data-stripe="pro">Go Pro</a>
+        </div>
+
+      </div>
+      <p class="pricing-note">Pro link is a placeholder — drop in your Stripe payment link to go live.</p>
     </div>
   </section>
 
@@ -187,18 +463,15 @@
         <div class="glow glow-3"></div>
         <div class="section-label">GET STARTED</div>
         <h2 class="section-title">Ready to go mobile?</h2>
-        <p class="download-sub">Download the desktop companion, install the app, and you're live.</p>
+        <p class="download-sub">Install the extension in Antigravity, scan the code, and command your agent from anywhere.</p>
         <div class="download-actions">
-          <a href="https://github.com/theanxioustrader/zerog-desktop/releases/download/v1.0.0/ZeroG-Desktop-Setup-1.0.0.exe" class="btn-primary btn-lg" id="main-download-btn">
+          <a href="/ZeroG-for-Antigravity.vsix" class="btn-primary btn-lg" id="main-download-btn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download for Windows
-            <span class="btn-sub">Free · v1.0.0 · Windows x64</span>
-          </a>
-          <a href="https://zerog-mobile.pages.dev" class="btn-secondary btn-lg" target="_blank">
-            Try Web App
+            Add ZeroG to Antigravity
+            <span class="btn-sub">Free · Antigravity extension</span>
           </a>
         </div>
-        <p class="download-note">macOS version coming soon</p>
+        <p class="download-note">Works in Antigravity on Windows &amp; macOS · iOS app via TestFlight</p>
       </div>
     </div>
   </section>
@@ -207,12 +480,13 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="nav-logo">
+        <a href="#" class="nav-logo">
           <span class="logo-mark">Z</span>
           <span class="logo-text">ZeroG</span>
-        </div>
+        </a>
         <p class="footer-copy">© 2026 ZeroG · zerog-ai.com</p>
         <div class="footer-links">
+          <a href="/connect.html">Setup</a>
           <a href="/privacy.html">Privacy</a>
           <a href="/terms.html">Terms</a>
           <a href="mailto:hello@zerog-ai.com">Contact</a>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZeroG — How to Connect &amp; FAQ</title>
+  <meta name="description" content="Step-by-step guide to connect ZeroG to your phone, plus answers to common questions." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #04040c; --surface: rgba(255,255,255,0.04); --surface-2: rgba(255,255,255,0.07);
+  --border: rgba(255,255,255,0.08); --text: #f1f5f9; --text-2: rgba(241,245,249,0.66);
+  --muted: rgba(241,245,249,0.36); --accent: #2dd4bf; --accent-2: #67e8f9; --green: #22c55e;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+.nav { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); background: rgba(4,4,12,0.75); }
+.nav-inner { max-width: 820px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-mark { width: 38px; height: 38px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border-radius: 11px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px; color: #04040c; }
+.logo-text { font-size: 20px; font-weight: 900; color: var(--text); letter-spacing: -0.6px; }
+.nav-back { color: var(--text-2); text-decoration: none; font-size: 14px; font-weight: 600; }
+.nav-back:hover { color: var(--text); }
+.wrap { max-width: 820px; margin: 0 auto; padding: 56px 24px 90px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; color: var(--accent); margin-bottom: 12px; }
+h1 { font-size: clamp(32px, 5vw, 46px); font-weight: 900; letter-spacing: -1.5px; margin-bottom: 14px; }
+.lede { font-size: 18px; color: var(--text-2); line-height: 1.6; margin-bottom: 16px; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 8px; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent), #14b8a6); color: #04241f; font-weight: 800; font-size: 15px; padding: 13px 24px; border-radius: 12px; text-decoration: none; }
+.btn-primary:hover { transform: translateY(-2px); }
+h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin: 56px 0 10px; }
+.section-sub { color: var(--text-2); font-size: 15px; margin-bottom: 26px; }
+.step { display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.step:last-child { border-bottom: none; }
+.step-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 11px; background: rgba(45,212,191,0.12); border: 1px solid rgba(45,212,191,0.28); color: var(--accent); font-weight: 900; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+.step h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.step p { font-size: 15px; line-height: 1.65; color: var(--text-2); }
+.step code { background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; font-size: 13px; color: var(--accent-2); }
+.callout { background: rgba(45,212,191,0.07); border: 1px solid rgba(45,212,191,0.2); border-radius: 14px; padding: 18px 20px; margin: 26px 0; font-size: 14px; line-height: 1.6; color: var(--text-2); }
+.callout b { color: var(--text); }
+details { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 0 20px; margin-bottom: 12px; }
+details[open] { background: var(--surface-2); }
+summary { font-size: 16px; font-weight: 600; padding: 18px 0; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; color: var(--accent); font-size: 22px; font-weight: 400; flex-shrink: 0; }
+details[open] summary::after { content: '–'; }
+details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 0 20px; }
+.footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
+.footer a { color: var(--accent); text-decoration: none; }
+.footer p { font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <a href="/" class="nav-back">← Back to home</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <div class="eyebrow">GET CONNECTED</div>
+    <h1>How to connect ZeroG</h1>
+    <p class="lede">ZeroG links your phone to your Antigravity AI agent. From install to your first command takes about a minute — here's the whole thing.</p>
+    <div class="cta-row">
+      <a href="/ZeroG-for-Antigravity.vsix" class="btn-primary">Download the extension</a>
+    </div>
+
+    <h2>Set up in 4 steps</h2>
+    <p class="section-sub">You'll need Antigravity installed on your computer and the ZeroG app on your phone.</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Add ZeroG to Antigravity</h3>
+        <p>Download the extension above. In Antigravity, open the <b>Extensions</b> panel, click the <code>···</code> menu at the top, choose <b>Install from VSIX…</b>, and pick the <code>ZeroG-for-Antigravity.vsix</code> file you just downloaded. Reload Antigravity when it asks.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Open ZeroG and generate a code</h3>
+        <p>In Antigravity, open the <b>ZeroG Mobile Bridge</b> panel and click <b>Generate Secure Connection</b>. A QR code appears.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>Scan it with your phone</h3>
+        <p>Open the ZeroG app, go to <b>Settings → Pair new device</b>, and point your camera at the QR code on your screen.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <h3>You're connected</h3>
+        <p>Your phone shows <b style="color:var(--green)">LIVE</b> and the desktop confirms the link. Type a message or a terminal command — it runs on your PC and the reply streams back to your phone.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Keep Antigravity running.</b> ZeroG connects to your live Antigravity session, so your computer needs to be on with Antigravity open for your phone to reach the agent.
+    </div>
+
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Do I need Antigravity to use ZeroG?</summary>
+      <p>Yes. ZeroG is the mobile companion for the Antigravity AI IDE — it connects directly to your running Antigravity session. Antigravity is desktop-only, and ZeroG is the way to use it from your phone.</p>
+    </details>
+
+    <details>
+      <summary>Is my data private?</summary>
+      <p>Your AI model and your code stay on your own machine. ZeroG runs nothing on our servers except the encrypted relay that passes messages between your phone and your PC. Your code is never stored or processed on a third-party AI service.</p>
+    </details>
+
+    <details>
+      <summary>My phone says OFFLINE — how do I fix it?</summary>
+      <p>Check three things: (1) Antigravity is open on your computer with the ZeroG panel running, (2) your computer is on and connected to the internet, and (3) you scanned the most recent QR code. If it's still offline, generate a fresh code in Antigravity and re-scan it from Settings → Pair new device.</p>
+    </details>
+
+    <details>
+      <summary>The QR code won't scan.</summary>
+      <p>Make sure the whole code is inside the camera frame with good lighting, and that you allowed camera access when ZeroG asked. Try moving a little closer or further from the screen. You can tap "Scan Again" to retry.</p>
+    </details>
+
+    <details>
+      <summary>Do I have to keep my computer on?</summary>
+      <p>Yes. Your agent runs on your PC, so your computer and Antigravity must be running for your phone to connect. If your PC sleeps or closes Antigravity, the phone will show offline until it's back.</p>
+    </details>
+
+    <details>
+      <summary>How do I connect a different computer?</summary>
+      <p>Open the ZeroG panel on the new computer, generate its QR code, then on your phone go to Settings → Pair new device and scan it. Pro lets you pair more than one device.</p>
+    </details>
+
+    <details>
+      <summary>How do I remove the ads?</summary>
+      <p>The free version shows an ad every few messages. Upgrading to Pro removes ads entirely and unlocks unlimited paired devices and priority speed. You can subscribe from the pricing section on the home page.</p>
+    </details>
+
+    <details>
+      <summary>Which phones are supported?</summary>
+      <p>iOS is available now. Android is coming soon. As long as your computer is on, you can connect from anywhere on Wi-Fi or cellular.</p>
+    </details>
+
+    <details>
+      <summary>I still need help.</summary>
+      <p>Email us at <a href="mailto:hello@zerog-ai.com" style="color:var(--accent-2)">hello@zerog-ai.com</a> and we'll get you connected.</p>
+    </details>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 ZeroG · <a href="/">Home</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:hello@zerog-ai.com">Contact</a></p>
+  </footer>
+
+</body>
+</html>
