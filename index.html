@@ -58,6 +58,10 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 .btn-lg { font-size: 17px; padding: 18px 32px; border-radius: 14px; }
 .btn-sub { font-size: 11px; font-weight: 600; opacity: 0.75; margin-left: 4px; }
 .hero-phone { flex-shrink: 0; width: 300px; }
+.phone-shot { display: block; width: 100%; border-radius: 36px; }
+.mini-shot { display: block; width: 100%; border-radius: 22px; }
+.store-badge.live { color: var(--text); cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+.store-badge.live:hover { border-color: var(--accent); background: rgba(45,212,191,0.08); }
 .phone-frame { background: linear-gradient(145deg, #1c1c2e, #131322); border-radius: 46px; padding: 11px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 40px 90px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.05) inset, 0 60px 120px rgba(45,212,191,0.12); }
 .phone-app { background: #03030d; border-radius: 36px; padding: 14px 13px 10px; overflow: hidden; display: flex; flex-direction: column; gap: 11px; }
 .app-statusbar { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; color: var(--text); padding: 4px 6px 0; }
@@ -183,6 +187,67 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
   .built-for-desc { border-left: none; padding-left: 0; }
 }
   </style>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cb9efad6dc3a477e81ec0faf9c66489c"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <!-- Social share image (fixes bare links on X / LinkedIn / forums) -->
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://zerog-ai.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZeroG — Your Antigravity Agent, In Your Pocket">
+  <meta name="twitter:description" content="The mobile companion for Google Antigravity. Pair by QR, command your AI agent, get live responses — over Wi-Fi or 5G, anywhere.">
+  <meta name="twitter:image" content="https://zerog-ai.com/assets/og-image.png">
+
+  <!-- Structured data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ZeroG",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "iOS",
+    "description": "ZeroG is the mobile companion for the Google Antigravity AI IDE. Pair your phone by QR code, send commands and run terminal commands, and watch your AI agent's responses stream live — over Wi-Fi or 5G, from anywhere.",
+    "url": "https://zerog-ai.com/",
+    "image": "https://zerog-ai.com/assets/og-image.png",
+    "offers": [
+      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Full access, ad-supported. 1 paired device." },
+      { "@type": "Offer", "name": "Pro", "price": "14.99", "priceCurrency": "USD", "description": "No ads, unlimited devices, priority relay & support." }
+    ],
+    "publisher": { "@type": "Organization", "name": "ZeroG" }
+  }
+  </script>
+
+  <!-- Structured data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ZeroG",
+    "url": "https://zerog-ai.com/",
+    "logo": "https://zerog-ai.com/assets/og-image.png",
+    "sameAs": [
+      "https://x.com/JackB454768"
+    ]
+  }
+  </script>
+
+  <!-- Structured data: FAQPage (mirrors the FAQ on /connect) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Do I need Antigravity to use ZeroG?","acceptedAnswer":{"@type":"Answer","text":"Yes. ZeroG is the mobile companion for the Antigravity AI IDE — it connects directly to your running Antigravity session. Antigravity is desktop-only, and ZeroG is the way to use it from your phone."}},
+      {"@type":"Question","name":"Is my data private?","acceptedAnswer":{"@type":"Answer","text":"Your AI model and your code stay on your own machine. ZeroG runs nothing on our servers except the encrypted relay that passes messages between your phone and your PC. Your code is never stored or processed on a third-party AI service."}},
+      {"@type":"Question","name":"How do I connect ZeroG to Antigravity?","acceptedAnswer":{"@type":"Answer","text":"Install the ZeroG app on your iPhone, add the ZeroG extension to Antigravity (Install from VSIX), generate a secure connection QR code in Antigravity, and scan it from the app under Settings → Pair new device."}},
+      {"@type":"Question","name":"Does ZeroG work over cellular / 5G?","acceptedAnswer":{"@type":"Answer","text":"Yes. As long as your computer is on with Antigravity running, you can connect from anywhere on Wi-Fi or cellular."}},
+      {"@type":"Question","name":"Which phones are supported?","acceptedAnswer":{"@type":"Answer","text":"iOS is available now as a free public beta on TestFlight. Android is coming soon."}},
+      {"@type":"Question","name":"How much does ZeroG cost?","acceptedAnswer":{"@type":"Answer","text":"ZeroG is free forever with ads (1 paired device). ZeroG Pro is $14.99/month for no ads, unlimited devices, and priority relay and support."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -198,7 +263,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="/connect.html">Setup</a>
-        <a href="#download" class="nav-cta">Join waitlist</a>
+        <a href="#download" class="nav-cta">Get the app</a>
       </div>
     </div>
   </nav>
@@ -225,57 +290,25 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
         responses on your phone, from anywhere in the world.
       </p>
       <div class="hero-actions">
-        <a href="mailto:hello@zerog-ai.com?subject=ZeroG%20Waitlist&body=Please%20notify%20me%20when%20ZeroG%20launches%20on%20the%20App%20Store." class="btn-primary" id="hero-download-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-          Get notified at launch
+        <a href="/ZeroG-for-Antigravity-3.3.1.vsix" class="btn-primary" id="hero-download-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Add to Antigravity
         </a>
         <a href="#how" class="btn-secondary">See how it works →</a>
       </div>
       <div class="hero-stores">
-        <span class="store-badge">
+        <a href="https://testflight.apple.com/join/s458PUSn" class="store-badge live" target="_blank" rel="noopener">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Coming soon to the App Store
-        </span>
+          Download for iPhone — Beta
+        </a>
         <span class="store-badge muted">Android later</span>
       </div>
     </div>
 
-    <!-- REAL APP MOCKUP — ZeroG Mission Control -->
+    <!-- REAL APP SCREENSHOT — ZeroG Mission Control -->
     <div class="hero-phone">
       <div class="phone-frame">
-        <div class="phone-app">
-          <div class="app-statusbar">
-            <span>9:41</span>
-            <span class="sb-icons">●●● ＷｉＦｉ ▮</span>
-          </div>
-          <div class="app-header">
-            <div class="app-logo">Z</div>
-            <div>
-              <div class="app-title">ZeroG</div>
-              <div class="app-subtitle">Mission Control</div>
-            </div>
-          </div>
-          <div class="app-hero-card">
-            <div class="ahc-title">ZeroG Agent</div>
-            <div class="ahc-sub">AI-powered command center</div>
-            <div class="ahc-stats">
-              <div class="stat stat-teal"><b>AI</b><span>Model</span></div>
-              <div class="stat stat-violet"><b>v2</b><span>Version</span></div>
-              <div class="stat stat-green"><b>ON</b><span>Status</span></div>
-            </div>
-          </div>
-          <div class="app-card">
-            <div class="app-card-label">AGENT STATUS</div>
-            <div class="status-row"><span>🧠 Agent connected</span><b class="t-violet">Active</b></div>
-            <div class="status-row"><span>💻 Commands enabled</span><b class="t-teal">Ready</b></div>
-            <div class="status-row no-border"><span>🔗 Relay connected</span><b class="t-green">Live</b></div>
-          </div>
-          <div class="app-tabs">
-            <div class="tab"><span>💼</span>CHAT</div>
-            <div class="tab"><span>⚡</span>TERMINAL</div>
-            <div class="tab active"><span class="tab-z">Z</span>MISSION</div>
-          </div>
-        </div>
+        <img src="/assets/screen-mission.png" alt="ZeroG Mission Control running on iPhone" class="phone-shot" />
       </div>
     </div>
   </section>
@@ -336,12 +369,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 
         <div class="showcase-item">
           <div class="mini-phone">
-            <div class="mp-screen">
-              <div class="mp-header"><span class="mp-dot"></span>Chat</div>
-              <div class="mp-bubble agent">Antigravity agent connected. Ready for your commands.</div>
-              <div class="mp-bubble user">Audit the codebase for errors</div>
-              <div class="mp-bubble agent">Scanning 142 files… found 3 issues. Want me to fix them?</div>
-            </div>
+            <img src="/assets/screen-chat.png" alt="ZeroG Chat screen on iPhone" class="mini-shot" />
           </div>
           <h3>Chat</h3>
           <p>Talk to your Antigravity agent in natural language. Responses stream back live.</p>
@@ -349,10 +377,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 
         <div class="showcase-item">
           <div class="mini-phone">
-            <div class="mp-screen">
-              <div class="mp-header"><span class="mp-dot"></span>Terminal</div>
-              <div class="mp-term"><span class="tl cmd">$ npm run build</span><span class="tl out">› compiling…</span><span class="tl ok">✓ built in 4.1s</span><span class="tl cmd">$ git status</span><span class="tl out">nothing to commit</span></div>
-            </div>
+            <img src="/assets/screen-terminal.png" alt="ZeroG live terminal on iPhone" class="mini-shot" />
           </div>
           <h3>Terminal</h3>
           <p>Run real commands on your PC and watch stdout, stderr, and exit codes stream in.</p>
@@ -360,12 +385,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
 
         <div class="showcase-item">
           <div class="mini-phone">
-            <div class="mp-screen">
-              <div class="mp-header"><span class="mp-dot"></span>Mission</div>
-              <div class="mp-hero"><b>ZeroG Agent</b><span>AI command center</span></div>
-              <div class="mp-row"><span>🧠 Agent</span><b class="t-violet">Active</b></div>
-              <div class="mp-row"><span>🔗 Relay</span><b class="t-green">Live</b></div>
-            </div>
+            <img src="/assets/screen-mission.png" alt="ZeroG Mission Control on iPhone" class="mini-shot" />
           </div>
           <h3>Mission Control</h3>
           <p>A live dashboard of your agent, commands, and relay — connection status at a glance.</p>
@@ -434,7 +454,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
             <li>Shows an ad every 10 messages</li>
             <li>Community support</li>
           </ul>
-          <a href="mailto:hello@zerog-ai.com?subject=ZeroG%20Waitlist&body=Please%20notify%20me%20when%20ZeroG%20launches%20on%20the%20App%20Store." class="btn-outline btn-block">Get notified at launch</a>
+          <a href="https://testflight.apple.com/join/s458PUSn" target="_blank" rel="noopener" class="btn-outline btn-block">Download free (beta)</a>
         </div>
 
         <div class="price-card featured">
@@ -461,17 +481,21 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--tex
     <div class="container">
       <div class="download-card">
         <div class="glow glow-3"></div>
-        <div class="section-label">LAUNCHING SOON</div>
-        <h2 class="section-title">Be first to go mobile</h2>
-        <p class="download-sub">ZeroG is launching on the App Store soon. Join the waitlist and we'll email you the moment it goes live.</p>
+        <div class="section-label">GET STARTED</div>
+        <h2 class="section-title">Ready to go mobile?</h2>
+        <p class="download-sub">Two quick pieces: get the iPhone app, then add the extension to Antigravity on your computer. Scan the code and you're connected.</p>
         <div class="download-actions">
-          <a href="mailto:hello@zerog-ai.com?subject=ZeroG%20Waitlist&body=Please%20notify%20me%20when%20ZeroG%20launches%20on%20the%20App%20Store." class="btn-primary btn-lg" id="main-download-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-            Get notified at launch
-            <span class="btn-sub">Join the waitlist · it's free</span>
+          <a href="https://testflight.apple.com/join/s458PUSn" target="_blank" rel="noopener" class="btn-primary btn-lg" id="ios-download-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download for iPhone
+            <span class="btn-sub">Free · Public beta on TestFlight</span>
+          </a>
+          <a href="/ZeroG-for-Antigravity-3.3.1.vsix" class="btn-outline btn-lg" id="main-download-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Add to Antigravity
           </a>
         </div>
-        <p class="download-note">Coming soon to the App Store · works with Antigravity on Windows &amp; macOS</p>
+        <p class="download-note">iPhone app: free public beta on TestFlight · Antigravity extension v3.3.1 (Windows &amp; macOS) · Android later</p>
       </div>
     </div>
   </section>

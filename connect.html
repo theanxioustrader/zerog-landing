@@ -50,6 +50,23 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
 .footer a { color: var(--accent); text-decoration: none; }
 .footer p { font-size: 13px; color: var(--muted); }
   </style>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cb9efad6dc3a477e81ec0faf9c66489c"}'></script><!-- End Cloudflare Web Analytics -->
+
+  <!-- Structured data: FAQPage (mirrors the visible FAQ below) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Do I need Antigravity to use ZeroG?","acceptedAnswer":{"@type":"Answer","text":"Yes. ZeroG is the mobile companion for the Antigravity AI IDE — it connects directly to your running Antigravity session. Antigravity is desktop-only, and ZeroG is the way to use it from your phone."}},
+      {"@type":"Question","name":"Is my data private?","acceptedAnswer":{"@type":"Answer","text":"Your AI model and your code stay on your own machine. ZeroG runs nothing on our servers except the encrypted relay that passes messages between your phone and your PC. Your code is never stored or processed on a third-party AI service."}},
+      {"@type":"Question","name":"How do I connect ZeroG to Antigravity?","acceptedAnswer":{"@type":"Answer","text":"Install the ZeroG app on your iPhone, add the ZeroG extension to Antigravity (Install from VSIX), generate a secure connection QR code in Antigravity, and scan it from the app under Settings → Pair new device."}},
+      {"@type":"Question","name":"Does ZeroG work over cellular / 5G?","acceptedAnswer":{"@type":"Answer","text":"Yes. As long as your computer is on with Antigravity running, you can connect from anywhere on Wi-Fi or cellular."}},
+      {"@type":"Question","name":"Which phones are supported?","acceptedAnswer":{"@type":"Answer","text":"iOS is available now as a free public beta on TestFlight. Android is coming soon."}},
+      {"@type":"Question","name":"How much does ZeroG cost?","acceptedAnswer":{"@type":"Answer","text":"ZeroG is free forever with ads (1 paired device). ZeroG Pro is $14.99/month for no ads, unlimited devices, and priority relay and support."}}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -65,31 +82,39 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
     <h1>How to connect ZeroG</h1>
     <p class="lede">ZeroG links your phone to your Antigravity AI agent. From install to your first command takes about a minute — here's the whole thing.</p>
     <div class="cta-row">
-      <a href="mailto:hello@zerog-ai.com?subject=ZeroG%20Waitlist&body=Please%20notify%20me%20when%20ZeroG%20launches%20on%20the%20App%20Store." class="btn-primary">Get notified at launch</a>
+      <a href="https://testflight.apple.com/join/s458PUSn" target="_blank" rel="noopener" class="btn-primary">Download for iPhone — Beta</a>
     </div>
-    <p style="color:var(--muted);font-size:14px;margin-top:-8px">ZeroG is launching on the App Store soon. The steps below are a preview of how setup will work.</p>
+    <p style="color:var(--muted);font-size:14px;margin-top:-8px">ZeroG for iPhone is now in <b>public beta on TestFlight</b> — tap above to install it free.</p>
 
-    <h2>Set up in 4 steps</h2>
-    <p class="section-sub">You'll need Antigravity installed on your computer and the ZeroG app on your phone.</p>
+    <h2>Set up in 5 steps</h2>
+    <p class="section-sub">You'll need the ZeroG app on your phone and Antigravity installed on your computer.</p>
 
     <div class="step">
       <div class="step-num">1</div>
       <div>
-        <h3>Add ZeroG to Antigravity</h3>
-        <p>At launch you'll download the ZeroG extension, then in Antigravity open the <b>Extensions</b> panel, click the <code>···</code> menu at the top, choose <b>Install from VSIX…</b>, and pick the <code>ZeroG-for-Antigravity.vsix</code> file. Reload Antigravity when it asks.</p>
+        <h3>Install ZeroG on your iPhone</h3>
+        <p>Tap <b>Download for iPhone — Beta</b> above. It opens Apple's <b>TestFlight</b> app (install TestFlight first if you don't have it), then tap <b>Install</b> to get ZeroG. It's free while we're in beta.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">2</div>
       <div>
-        <h3>Open ZeroG and generate a code</h3>
-        <p>In Antigravity, open the <b>ZeroG Mobile Bridge</b> panel and click <b>Generate Secure Connection</b>. A QR code appears.</p>
+        <h3>Add ZeroG to Antigravity</h3>
+        <p>On your computer, download the ZeroG extension, then in Antigravity open the <b>Extensions</b> panel, click the <code>···</code> menu at the top, choose <b>Install from VSIX…</b>, and pick the <code>ZeroG-for-Antigravity.vsix</code> file. Reload Antigravity when it asks.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">3</div>
+      <div>
+        <h3>Generate a connection code</h3>
+        <p>In Antigravity, open the <b>ZeroG Mobile Bridge</b> panel and click <b>Generate Secure Connection</b>. A QR code appears.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
       <div>
         <h3>Scan it with your phone</h3>
         <p>Open the ZeroG app, go to <b>Settings → Pair new device</b>, and point your camera at the QR code on your screen.</p>
@@ -97,7 +122,7 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
     </div>
 
     <div class="step">
-      <div class="step-num">4</div>
+      <div class="step-num">5</div>
       <div>
         <h3>You're connected</h3>
         <p>Your phone shows <b style="color:var(--green)">LIVE</b> and the desktop confirms the link. Type a message or a terminal command — it runs on your PC and the reply streams back to your phone.</p>
@@ -105,7 +130,34 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
     </div>
 
     <div class="callout">
-      <b>Keep Antigravity running.</b> ZeroG connects to your live Antigravity session, so your computer needs to be on with Antigravity open for your phone to reach the agent.
+      <b>Keep your computer awake.</b> ZeroG connects to your live Antigravity session, so your computer needs to be on with Antigravity open for your phone to reach the agent. If your PC goes to sleep, the phone will show offline until it wakes — for long sessions, set your computer to not sleep while plugged in.
+    </div>
+
+    <h2>Good to know</h2>
+    <p class="section-sub">A few controls and tips to get the most out of ZeroG.</p>
+
+    <div class="step">
+      <div class="step-num">★</div>
+      <div>
+        <h3>Live status at a glance</h3>
+        <p>The <b style="color:var(--green)">LIVE</b> / <b>OFFLINE</b> badge at the top of the app tells you whether your phone can currently reach your PC. Green means you're good to go.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">★</div>
+      <div>
+        <h3>Pair more than one computer</h3>
+        <p>Go to <b>Settings → Pair new device</b> and scan a new computer's code anytime. ZeroG Pro lets you keep multiple computers paired.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">★</div>
+      <div>
+        <h3>Remove ads with Pro</h3>
+        <p>The free version shows an ad every few messages. <b>ZeroG Pro</b> removes ads and unlocks unlimited paired devices — enter your account email under <b>Settings → ZeroG Pro</b> to unlock it on your device.</p>
+      </div>
     </div>
 
     <h2>Frequently asked questions</h2>
