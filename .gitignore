@@ -1,0 +1,11 @@
+# Never commit secrets or local junk to this PUBLIC repo
+.env
+.env.*
+*.key
+*.pem
+*.p8
+*.p12
+secrets/
+node_modules/
+.DS_Store
+Thumbs.db
