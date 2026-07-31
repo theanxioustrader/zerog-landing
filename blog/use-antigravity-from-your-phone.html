@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Use Google Antigravity From Your Phone (2026 Guide) — ZeroG</title>
+  <meta name="description" content="Google Antigravity is desktop-only — but you can still command your AI agent from your phone. Here's how to run, monitor, and steer Antigravity remotely in 2026." />
+  <link rel="canonical" href="https://zerog-ai.com/blog/use-antigravity-from-your-phone.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Use Google Antigravity From Your Phone (2026 Guide)" />
+  <meta property="og:description" content="Antigravity is desktop-only — but you can still command your AI agent from your phone. Here's how, in 2026." />
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <meta property="og:url" content="https://zerog-ai.com/blog/use-antigravity-from-your-phone.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Use Google Antigravity From Your Phone (2026 Guide)","description":"Google Antigravity is desktop-only — but you can still command your AI agent from your phone. Here's how to run, monitor, and steer Antigravity remotely in 2026.","image":"https://zerog-ai.com/assets/og-image.png","datePublished":"2026-06-28","author":{"@type":"Organization","name":"ZeroG"},"publisher":{"@type":"Organization","name":"ZeroG","logo":{"@type":"ImageObject","url":"https://zerog-ai.com/assets/og-image.png"}},"mainEntityOfPage":"https://zerog-ai.com/blog/use-antigravity-from-your-phone.html"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Does Google Antigravity have an official mobile app?","acceptedAnswer":{"@type":"Answer","text":"No. Antigravity is desktop-only. Mobile access comes from companion tools that bridge your phone to your running desktop session."}},
+  {"@type":"Question","name":"Can I use Antigravity over cellular / 5G, not just Wi-Fi?","acceptedAnswer":{"@type":"Answer","text":"Yes — with a companion like ZeroG, as long as your computer is on with Antigravity running, you can connect from anywhere on Wi-Fi or cellular."}},
+  {"@type":"Question","name":"Which phones are supported?","acceptedAnswer":{"@type":"Answer","text":"ZeroG is on iOS now (free on the App Store); Android is coming soon. Open-source options work in any mobile browser."}},
+  {"@type":"Question","name":"Do I need to keep my computer on?","acceptedAnswer":{"@type":"Answer","text":"Yes. The agent runs on your PC, so your computer and Antigravity must be running for your phone to connect."}}
+  ]}
+  </script>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#04040c;--surface:rgba(255,255,255,0.04);--surface-2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.08);--text:#f1f5f9;--text-2:rgba(241,245,249,0.7);--muted:rgba(241,245,249,0.34);--accent:#2dd4bf;--accent-2:#67e8f9}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);background:rgba(4,4,12,0.72)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:21px;color:#04040c;letter-spacing:-1px}
+.logo-text{font-size:21px;font-weight:900;letter-spacing:-0.8px;color:var(--text)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--surface-2);border:1px solid var(--border);color:var(--text)!important;padding:8px 18px;border-radius:9px;font-weight:600!important}
+.article{max-width:740px;margin:0 auto;padding:130px 24px 70px}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--accent);text-decoration:none}
+.meta{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+.article h1{font-size:clamp(30px,4.5vw,46px);font-weight:900;letter-spacing:-1.3px;line-height:1.1;margin-bottom:28px}
+.article h2{font-size:25px;font-weight:800;letter-spacing:-.5px;margin:42px 0 14px}
+.article h3{font-size:18px;font-weight:700;margin:26px 0 8px}
+.article p{font-size:17px;line-height:1.75;color:var(--text-2);margin-bottom:18px}
+.article ul,.article ol{margin:0 0 18px 22px}
+.article li{font-size:17px;line-height:1.7;color:var(--text-2);margin-bottom:8px}
+.article a{color:var(--accent-2);text-decoration:underline}
+.article strong{color:var(--text)}
+.cta-box{background:linear-gradient(135deg,rgba(45,212,191,0.1),rgba(103,232,249,0.05));border:1px solid rgba(45,212,191,0.25);border-radius:18px;padding:28px 30px;margin:40px 0 10px;text-align:center}
+.cta-box p{font-size:17px;color:var(--text);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),#14b8a6);color:#04241f;font-weight:800;font-size:15px;padding:13px 26px;border-radius:12px;text-decoration:none}
+.faq-q{font-weight:700;color:var(--text);margin:22px 0 4px;font-size:17px}
+.footer{padding:40px 24px;border-top:1px solid var(--border);margin-top:50px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none}
+.disc{font-size:11px;color:var(--muted);text-align:center;max-width:700px;margin:16px auto 0;padding-top:16px;border-top:1px solid var(--border);line-height:1.6}
+@media(max-width:600px){.nav-links a:not(.nav-cta){display:none}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <div class="nav-links">
+        <a href="/#how">How it works</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#download" class="nav-cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="crumb"><a href="/blog/">← ZeroG Blog</a></div>
+    <div class="meta">JUNE 28, 2026 · GUIDE</div>
+    <h1>How to Use Google Antigravity From Your Phone (2026 Guide)</h1>
+
+    <p>Google Antigravity is one of the fastest-growing agentic coding platforms of the past year — but it has one real limitation: <strong>it's desktop-only.</strong> There's no official mobile app. So when you kick off a long agent run and then need to step away from your machine, you're stuck either babysitting the desk or losing visibility into what your agent is doing.</p>
+    <p>The good news: you <em>can</em> use Antigravity from your phone today. This guide covers whether it's possible, why you'd want to, the options available in 2026, and a step-by-step setup.</p>
+
+    <h2>Can you use Antigravity on mobile?</h2>
+    <p>Not directly — Antigravity itself only runs on Windows, macOS, and Linux desktops. But because Antigravity runs locally and exposes a way to connect to a running session, <strong>companion tools can bridge your phone to your desktop agent.</strong> You're not running the IDE on your phone; your phone becomes a live remote for the agent that's already running on your computer.</p>
+
+    <h2>Why control Antigravity from your phone?</h2>
+    <p>The whole point of an agentic IDE is that the AI can work semi-autonomously. But "semi-autonomous" still means it occasionally needs you — to approve an action, answer a question, or react when a task finishes. If you're away from the desk, those moments stall silently. Running Antigravity from your phone lets you:</p>
+    <ul>
+      <li><strong>Start a build, then walk away</strong> and keep steering it from anywhere.</li>
+      <li><strong>Get notified the moment</strong> a task finishes or the agent needs input.</li>
+      <li><strong>Approve or redirect</strong> the agent without going back to your computer.</li>
+      <li><strong>Catch problems early</strong> instead of returning hours later to a stalled run.</li>
+    </ul>
+
+    <h2>The options in 2026</h2>
+    <p>There are a few ways to bridge Antigravity to mobile:</p>
+    <ol>
+      <li><strong>Open-source remotes.</strong> Several community projects mirror your Antigravity chat to a phone browser over your local network. They're powerful but typically require cloning a repo, running terminal commands, and setting up tunnels for access beyond your home Wi-Fi.</li>
+      <li><strong>A dedicated mobile companion app.</strong> If you'd rather not wire up tunnels and terminals, a purpose-built app handles pairing and remote access for you. <a href="/">ZeroG</a> is built specifically for Antigravity: you pair your phone to your desktop with a QR code, then send commands, run terminal commands, and watch your agent's responses stream live — over Wi-Fi <em>or</em> cellular, from anywhere in the world.</li>
+    </ol>
+    <p>Which is right for you depends on how much setup you enjoy. If you like tinkering, the open-source route is flexible. If you want it working in under a minute, a companion app is the faster path.</p>
+
+    <h2>Step-by-step: command Antigravity from your phone with ZeroG</h2>
+    <ol>
+      <li><strong>Install the app.</strong> Get ZeroG on your iPhone (free on the App Store).</li>
+      <li><strong>Add the extension to Antigravity.</strong> Install the ZeroG extension via <em>Extensions → Install from VSIX</em>.</li>
+      <li><strong>Generate a connection code.</strong> In Antigravity, open the ZeroG panel and click <em>Generate Secure Connection</em> — a QR code appears.</li>
+      <li><strong>Scan it.</strong> In the ZeroG app, go to <em>Settings → Pair new device</em> and scan the code.</li>
+      <li><strong>You're live.</strong> Type a message or terminal command from your phone; it runs on your PC and the reply streams back in real time.</li>
+    </ol>
+    <p>That's the whole setup — about a minute from install to first command.</p>
+
+    <h2>Is it safe to remote-control Antigravity?</h2>
+    <p>A fair question, because you're connecting your phone to a machine running your code. Two things to look for in any solution:</p>
+    <ul>
+      <li><strong>Where does your code and AI model run?</strong> With a good companion, both stay on <strong>your own machine</strong> — the tool only relays messages between your phone and PC, so your code is never stored or processed on a third-party AI service.</li>
+      <li><strong>Does it modify Antigravity?</strong> Reputable remotes read the UI and relay your input rather than patching the app or intercepting its network traffic.</li>
+    </ul>
+    <p>ZeroG follows this model: your model and code stay local, and only an encrypted relay links your phone to your PC.</p>
+
+    <h2>One requirement to remember</h2>
+    <p>Because your agent runs on your computer, <strong>your PC has to stay on with Antigravity open</strong> for your phone to reach it. For long sessions, set your computer not to sleep while plugged in.</p>
+
+    <h2>FAQ</h2>
+    <p class="faq-q">Does Google Antigravity have an official mobile app?</p>
+    <p>No. Antigravity is desktop-only. Mobile access comes from companion tools that bridge your phone to your running desktop session.</p>
+    <p class="faq-q">Can I use Antigravity over cellular / 5G, not just Wi-Fi?</p>
+    <p>Yes — with a companion like ZeroG, as long as your computer is on with Antigravity running, you can connect from anywhere on Wi-Fi or cellular.</p>
+    <p class="faq-q">Which phones are supported?</p>
+    <p>ZeroG is on iOS now (free on the App Store); Android is coming soon. Open-source options work in any mobile browser.</p>
+    <p class="faq-q">Do I need to keep my computer on?</p>
+    <p>Yes. The agent runs on your PC, so your computer and Antigravity must be running for your phone to connect.</p>
+
+    <div class="cta-box">
+      <p>Want to try it? ZeroG is the mobile companion for Google Antigravity — pair by QR, command your agent from anywhere.</p>
+      <a href="/#download" class="btn">Get ZeroG free →</a>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <p class="footer-copy">© 2026 ZeroG · zerog-ai.com</p>
+      <div class="footer-links">
+        <a href="/connect.html">Setup</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+    <p class="disc">ZeroG is an independent product and is not affiliated with, endorsed by, or sponsored by Antigravity or Google DeepMind.</p>
+  </footer>
+<script src="/track.js" defer></script>
+</body>
+</html>
