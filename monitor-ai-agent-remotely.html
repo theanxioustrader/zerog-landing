@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Monitor a Long-Running AI Coding Agent Remotely (2026) — ZeroG</title>
+  <meta name="description" content="AI coding agents can run for 20 minutes or two hours — and they stall the moment they need you. Here's how to watch a long-running agent from your phone, what to monitor, and how to set it up for Google Antigravity." />
+  <link rel="canonical" href="https://zerog-ai.com/monitor-ai-agent-remotely" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Monitor a Long-Running AI Coding Agent Remotely (2026)" />
+  <meta property="og:description" content="How to watch a long-running AI coding agent from your phone, what to monitor, and how to set it up for Google Antigravity." />
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://zerog-ai.com/monitor-ai-agent-remotely" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@getzerog" />
+  <meta name="twitter:title" content="How to Monitor a Long-Running AI Coding Agent Remotely (2026)" />
+  <meta name="twitter:description" content="How to watch a long-running AI coding agent from your phone, what to monitor, and how to set it up for Google Antigravity." />
+  <meta name="twitter:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Monitor a Long-Running AI Coding Agent Remotely (2026)","description":"How to watch a long-running AI coding agent from your phone, what to monitor, and how to set it up for Google Antigravity.","image":"https://zerog-ai.com/assets/og-image.png","datePublished":"2026-08-05","dateModified":"2026-08-05","author":{"@type":"Organization","name":"ZeroG"},"publisher":{"@type":"Organization","name":"ZeroG","logo":{"@type":"ImageObject","url":"https://zerog-ai.com/assets/app-icon.png"}},"mainEntityOfPage":"https://zerog-ai.com/monitor-ai-agent-remotely"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ZeroG: Remote for Antigravity","alternateName":"ZeroG","applicationCategory":"DeveloperApplication","operatingSystem":"iOS 15.1+","description":"ZeroG is the mobile companion for the Google Antigravity AI IDE. It requires the desktop Antigravity IDE to be running — ZeroG does not work standalone. Send commands, run terminal commands, and watch your AI agent's responses stream live from your phone.","url":"https://zerog-ai.com/","downloadUrl":"https://apps.apple.com/us/app/id6763589468","image":"https://zerog-ai.com/assets/og-image.png","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD","description":"Full access, ad-supported. 1 paired device."},{"@type":"Offer","name":"Pro","price":"12.99","priceCurrency":"USD","description":"No ads, unlimited devices, priority relay & support."}],"publisher":{"@type":"Organization","name":"ZeroG"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"How do I monitor a long-running AI coding agent remotely?","acceptedAnswer":{"@type":"Answer","text":"Connect a second device to the machine the agent runs on. The practical options are a remote-desktop or SSH session into your computer, or a purpose-built companion app that streams the agent's chat and terminal output to your phone. For the Google Antigravity IDE, ZeroG is a companion app that pairs your iPhone to the running desktop session and streams the agent's replies and terminal output live."}},
+  {"@type":"Question","name":"What should I actually watch while an agent runs?","acceptedAnswer":{"@type":"Answer","text":"Three things: the agent's chat (is it asking a question or announcing a decision?), the terminal output (are builds and tests passing?), and the session status (is it still running, finished, or stalled waiting on you?)."}},
+  {"@type":"Question","name":"Can I monitor an Antigravity agent from my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. Antigravity itself is desktop-only, but the ZeroG companion app connects to your running Antigravity session and streams the agent's chat and terminal output to your iPhone in real time, over Wi-Fi or cellular."}},
+  {"@type":"Question","name":"Can I intervene remotely, or only watch?","acceptedAnswer":{"@type":"Answer","text":"You can intervene. From the phone you can answer the agent's questions, send follow-up instructions, redirect it, or stop it — the same inputs you'd give at the keyboard."}},
+  {"@type":"Question","name":"Does remote monitoring send my code to a third party?","acceptedAnswer":{"@type":"Answer","text":"It shouldn't, and with ZeroG it doesn't — your code and AI model stay on your own machine, and ZeroG only relays messages between your phone and your PC over an encrypted connection."}}
+  ]}
+  </script>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#04040c;--surface:rgba(255,255,255,0.04);--surface-2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.08);--text:#f1f5f9;--text-2:rgba(241,245,249,0.7);--muted:rgba(241,245,249,0.34);--accent:#2dd4bf;--accent-2:#67e8f9;--green:#22c55e}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);background:rgba(4,4,12,0.72)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:21px;color:#04040c;letter-spacing:-1px}
+.logo-text{font-size:21px;font-weight:900;letter-spacing:-0.8px;color:var(--text)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--surface-2);border:1px solid var(--border);color:var(--text)!important;padding:8px 18px;border-radius:9px;font-weight:600!important}
+.article{max-width:740px;margin:0 auto;padding:130px 24px 70px}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--accent);text-decoration:none}
+.meta{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+.article h1{font-size:clamp(30px,4.5vw,46px);font-weight:900;letter-spacing:-1.3px;line-height:1.1;margin-bottom:22px}
+.lede{font-size:18px;line-height:1.65;color:var(--text-2);background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:18px 22px;margin-bottom:30px}
+.lede strong{color:var(--text)}
+.article h2{font-size:24px;font-weight:800;letter-spacing:-.5px;margin:38px 0 12px}
+.article h3{font-size:18px;font-weight:700;margin:24px 0 8px}
+.article p{font-size:16px;line-height:1.75;color:var(--text-2);margin-bottom:16px}
+.article ul,.article ol{margin:0 0 16px 22px}
+.article li{font-size:16px;line-height:1.7;color:var(--text-2);margin-bottom:8px}
+.article a{color:var(--accent-2);text-decoration:underline}
+.article strong{color:var(--text)}
+.cta-box{background:linear-gradient(135deg,rgba(45,212,191,0.1),rgba(103,232,249,0.05));border:1px solid rgba(45,212,191,0.25);border-radius:18px;padding:28px 30px;margin:36px 0 10px;text-align:center}
+.cta-box p{font-size:17px;color:var(--text);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),#14b8a6);color:#04241f;font-weight:800;font-size:15px;padding:13px 26px;border-radius:12px;text-decoration:none}
+.faq-list details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:0 20px;margin-bottom:12px}
+.faq-list details[open]{background:var(--surface-2)}
+.faq-list summary{font-size:16px;font-weight:600;padding:18px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--text)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';color:var(--accent);font-size:22px;font-weight:400;flex-shrink:0}
+.faq-list details[open] summary::after{content:'–'}
+.faq-list p{font-size:15px;line-height:1.7;color:var(--text-2);padding:0 0 20px;margin:0}
+.related{margin-top:14px}
+.footer{padding:40px 24px;border-top:1px solid var(--border);margin-top:50px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--text-2)}
+.disc{font-size:11px;color:var(--muted);text-align:center;max-width:700px;margin:16px auto 0;padding-top:16px;border-top:1px solid var(--border);line-height:1.6}
+@media(max-width:600px){.nav-links a:not(.nav-cta){display:none}}
+  </style>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cb9efad6dc3a477e81ec0faf9c66489c"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Microsoft Clarity (session replay + heatmaps; disclosed in /privacy §7) --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xen0wwx0p0");</script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <div class="nav-links">
+        <a href="/#how">How it works</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#download" class="nav-cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="crumb"><a href="/">← ZeroG</a></div>
+    <div class="meta">GUIDE · UPDATED AUGUST 2026</div>
+    <h1>How to Monitor a Long-Running AI Coding Agent Remotely</h1>
+
+    <p class="lede"><strong>Short answer:</strong> connect a second device to the machine the agent runs on. You can remote-desktop or SSH into your computer, or — much lighter — use a purpose-built companion app that streams the agent's chat and terminal output to your phone. For the Google Antigravity IDE, that companion is ZeroG: it pairs your iPhone to your running desktop session and streams everything live, so you can check in from anywhere and step in the moment the agent needs you.</p>
+
+    <h2>The problem: agents run long, then stall on you</h2>
+    <p>Modern agentic IDEs like Google Antigravity will happily work on a task for twenty minutes, an hour, sometimes longer — refactoring, running tests, fixing what broke, running them again. Two things go wrong when you walk away:</p>
+    <ul>
+      <li><strong>The agent hits a question and stops.</strong> "Should I also update the tests?" — and it waits. If you're at lunch, that's an hour of nothing happening.</li>
+      <li><strong>The agent goes confidently in the wrong direction.</strong> By the time you're back, it's rewritten half a module you never asked it to touch.</li>
+    </ul>
+    <p>Both problems have the same fix: being able to <em>see</em> the session and <em>talk</em> to it without sitting in front of the computer.</p>
+
+    <h2>What to actually monitor</h2>
+    <p>You don't need to watch every token. Three signals cover it:</p>
+    <ul>
+      <li><strong>The agent's chat.</strong> Questions, decisions, and summaries show up here. This is where you catch "waiting for your input" early.</li>
+      <li><strong>Terminal output.</strong> Build logs, test results, and errors tell you whether the work is actually succeeding, independent of what the agent says about it.</li>
+      <li><strong>Session status.</strong> Still running? Finished? Idle and waiting? Knowing which state you're in decides whether you need to act at all.</li>
+    </ul>
+
+    <h2>Your options for remote monitoring</h2>
+    <h3>1. Remote desktop (VNC, RDP, Chrome Remote Desktop)</h3>
+    <p>Works, but heavy: you're streaming your whole screen to squint at a desktop UI on a phone. Fine for a rare check-in, painful as a routine.</p>
+    <h3>2. SSH + terminal multiplexer</h3>
+    <p>Good for agents that live entirely in a terminal. But GUI-based IDEs like Antigravity don't expose their agent chat over SSH, so you only see half the picture — and you need to manage keys, a tunnel or VPN, and a mobile SSH client.</p>
+    <h3>3. A companion app built for your IDE</h3>
+    <p>A companion connects to the IDE session itself and forwards exactly the three signals above to your phone, in a mobile-native interface. For Antigravity, that's what <a href="/">ZeroG</a> does: an extension inside the IDE pairs with the ZeroG iPhone app, and from then on the agent's chat, your terminal, and connection status stream to your phone live — over Wi-Fi or cellular, with no tunnel to configure. <a href="/connect">Setup takes about a minute</a>.</p>
+
+    <h2>Monitoring an Antigravity agent with ZeroG, concretely</h2>
+    <ul>
+      <li><strong>Chat view:</strong> the agent's messages stream in as they're generated; you reply from the phone and the reply lands in Antigravity's chat on your desktop.</li>
+      <li><strong>Live terminal:</strong> stdout, stderr, and exit codes stream line by line, so a red test run is visible from the couch, the train, or the school pickup line.</li>
+      <li><strong>Mission Control:</strong> a status dashboard showing your agent, recent commands, and relay connection at a glance.</li>
+    </ul>
+    <p>One thing to be clear about: ZeroG is a <strong>companion that connects to the Google Antigravity IDE</strong> — it doesn't run the agent itself. Your computer stays on with Antigravity open, your code and AI model stay on your machine, and ZeroG relays messages between phone and desktop over an encrypted connection.</p>
+
+    <h2>Monitoring habits that work</h2>
+    <ul>
+      <li><strong>Check the chat first.</strong> If the agent asked a question, everything else is on hold until you answer it.</li>
+      <li><strong>Glance at the last terminal lines.</strong> A passing test suite at the bottom of the log usually means you can put the phone away.</li>
+      <li><strong>Interrupt early.</strong> If the plan looks wrong at minute five, say so at minute five — redirecting an agent is far cheaper than reverting an hour of confident mistakes.</li>
+    </ul>
+
+    <div class="cta-box">
+      <p>ZeroG is the mobile companion for the Google Antigravity IDE — available now on the App Store.</p>
+      <a href="https://apps.apple.com/us/app/id6763589468" target="_blank" rel="noopener" class="btn">Download on the App Store →</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <details>
+        <summary>How do I monitor a long-running AI coding agent remotely?</summary>
+        <p>Connect a second device to the machine the agent runs on. The practical options are a remote-desktop or SSH session into your computer, or a purpose-built companion app that streams the agent's chat and terminal output to your phone. For the Google Antigravity IDE, ZeroG is a companion app that pairs your iPhone to the running desktop session and streams the agent's replies and terminal output live.</p>
+      </details>
+      <details>
+        <summary>What should I actually watch while an agent runs?</summary>
+        <p>Three things: the agent's chat (is it asking a question or announcing a decision?), the terminal output (are builds and tests passing?), and the session status (is it still running, finished, or stalled waiting on you?).</p>
+      </details>
+      <details>
+        <summary>Can I monitor an Antigravity agent from my phone?</summary>
+        <p>Yes. Antigravity itself is desktop-only, but the ZeroG companion app connects to your running Antigravity session and streams the agent's chat and terminal output to your iPhone in real time, over Wi-Fi or cellular.</p>
+      </details>
+      <details>
+        <summary>Can I intervene remotely, or only watch?</summary>
+        <p>You can intervene. From the phone you can answer the agent's questions, send follow-up instructions, redirect it, or stop it — the same inputs you'd give at the keyboard.</p>
+      </details>
+      <details>
+        <summary>Does remote monitoring send my code to a third party?</summary>
+        <p>It shouldn't, and with ZeroG it doesn't — your code and AI model stay on your own machine, and ZeroG only relays messages between your phone and your PC over an encrypted connection.</p>
+      </details>
+    </div>
+
+    <h2 class="related">Related guides</h2>
+    <ul>
+      <li><a href="/approve-ai-agent-actions-remotely">How to approve AI agent actions when you're away from your desk</a></li>
+      <li><a href="/antigravity-remote-control">Control your Antigravity AI agent remotely</a></li>
+      <li><a href="/antigravity-from-phone">Can you use Google Antigravity from your phone?</a></li>
+      <li><a href="/connect">Step-by-step ZeroG setup &amp; FAQ</a></li>
+    </ul>
+  </article>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <p class="footer-copy">© 2026 ZeroG · zerog-ai.com</p>
+      <div class="footer-links">
+        <a href="/connect">Setup</a>
+        <a href="/blog/">Guides</a>
+        <a href="/alternatives">Alternatives</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+    <p class="disc">ZeroG is an independent product and is not affiliated with, endorsed by, or sponsored by Antigravity or Google DeepMind.</p>
+  </footer>
+<script src="/track.js" defer></script>
+</body>
+</html>

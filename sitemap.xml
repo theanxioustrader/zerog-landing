@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zerog-ai.com/</loc><lastmod>2026-06-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://zerog-ai.com/connect</loc><lastmod>2026-06-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://zerog-ai.com/blog/</loc><lastmod>2026-06-29</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://zerog-ai.com/blog/use-antigravity-from-your-phone.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://zerog-ai.com/privacy.html</loc><lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://zerog-ai.com/terms.html</loc><lastmod>2026-06-28</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://zerog-ai.com/</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://zerog-ai.com/connect</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerog-ai.com/antigravity-mobile</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerog-ai.com/antigravity-remote-control</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerog-ai.com/antigravity-from-phone</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerog-ai.com/antigravity-on-iphone</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerog-ai.com/monitor-ai-agent-remotely</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerog-ai.com/approve-ai-agent-actions-remotely</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://zerog-ai.com/alternatives</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://zerog-ai.com/blog/</loc><lastmod>2026-08-03</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://zerog-ai.com/blog/use-antigravity-from-your-phone</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerog-ai.com/contact</loc><lastmod>2026-08-03</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://zerog-ai.com/privacy</loc><lastmod>2026-08-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://zerog-ai.com/terms</loc><lastmod>2026-08-03</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

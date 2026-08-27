@@ -5,7 +5,9 @@
 User-agent: *
 Allow: /
 
-# AI answer / search crawlers (drive citations in ChatGPT, Perplexity, Gemini, Claude, Bing)
+# ── AI answer / search crawlers (ALLOWED) ──────────────────────────────
+# These drive citations in ChatGPT, Perplexity, Gemini, Claude, Bing/Copilot,
+# Google AI Overviews, and Apple Intelligence. Keep these open.
 User-agent: OAI-SearchBot
 Allow: /
 User-agent: ChatGPT-User
@@ -22,9 +24,22 @@ User-agent: Googlebot
 Allow: /
 User-agent: Bingbot
 Allow: /
-User-agent: Google-Extended
+User-agent: DuckDuckBot
 Allow: /
+User-agent: Applebot
+Allow: /
+
+# ── Pure AI-TRAINING crawlers (DISALLOWED — Akiva's call) ───────────────
+# These scrape content to train future foundation models; they don't drive
+# citations in AI answers the way the search/answer bots above do. Currently
+# blocked. To allow one, change its "Disallow: /" to "Allow: /" below.
 User-agent: GPTBot
-Allow: /
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Bytespider
+Disallow: /
 
 Sitemap: https://zerog-ai.com/sitemap.xml

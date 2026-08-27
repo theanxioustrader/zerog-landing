@@ -3,8 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZeroG — How to Connect &amp; FAQ</title>
-  <meta name="description" content="Step-by-step guide to connect ZeroG to your phone, plus answers to common questions." />
+  <title>How to Connect ZeroG to Antigravity — Setup &amp; FAQ</title>
+  <meta name="description" content="Step-by-step guide to pair ZeroG, the mobile companion for the Google Antigravity IDE, to your phone — plus answers to common setup questions." />
+  <link rel="canonical" href="https://zerog-ai.com/connect" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="How to Connect ZeroG to Antigravity — Setup &amp; FAQ" />
+  <meta property="og:description" content="Step-by-step guide to pair ZeroG, the mobile companion for the Google Antigravity IDE, to your phone — plus answers to common setup questions." />
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://zerog-ai.com/connect" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@getzerog" />
+  <meta name="twitter:title" content="How to Connect ZeroG to Antigravity — Setup &amp; FAQ" />
+  <meta name="twitter:description" content="Step-by-step guide to pair ZeroG, the mobile companion for the Google Antigravity IDE, to your phone." />
+  <meta name="twitter:image" content="https://zerog-ai.com/assets/og-image.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -60,13 +73,15 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
     "mainEntity": [
       {"@type":"Question","name":"Do I need Antigravity to use ZeroG?","acceptedAnswer":{"@type":"Answer","text":"Yes. ZeroG is the mobile companion for the Antigravity AI IDE — it connects directly to your running Antigravity session. Antigravity is desktop-only, and ZeroG is the way to use it from your phone."}},
       {"@type":"Question","name":"Is my data private?","acceptedAnswer":{"@type":"Answer","text":"Your AI model and your code stay on your own machine. ZeroG runs nothing on our servers except the encrypted relay that passes messages between your phone and your PC. Your code is never stored or processed on a third-party AI service."}},
-      {"@type":"Question","name":"How do I connect ZeroG to Antigravity?","acceptedAnswer":{"@type":"Answer","text":"Install the ZeroG app on your iPhone, add the ZeroG extension to Antigravity (Install from VSIX), generate a secure connection QR code in Antigravity, and scan it from the app under Settings → Pair new device."}},
+      {"@type":"Question","name":"How do I connect ZeroG to Antigravity?","acceptedAnswer":{"@type":"Answer","text":"Install the ZeroG extension in Antigravity (search ZeroG in the Extensions panel), then click Connect my iPhone when the setup wizard pops up. It shows a QR to get the free iPhone app, then a secure pairing QR — scan it from the app under Settings → Pair new device and you're live."}},
       {"@type":"Question","name":"Does ZeroG work over cellular / 5G?","acceptedAnswer":{"@type":"Answer","text":"Yes. As long as your computer is on with Antigravity running, you can connect from anywhere on Wi-Fi or cellular."}},
+      {"@type":"Question","name":"Chat works but approval requests never reach my phone.","acceptedAnswer":{"@type":"Answer","text":"Approvals use a one-time desktop setup that chat doesn't need. Update the ZeroG extension to 3.4.1 or newer, then check the Antigravity status bar: ZeroG Approvals ON means you're set; OFF pops a warning with a Fix-it button that repairs the setup in one click. On Windows, launch Antigravity from the new Antigravity (ZeroG) Desktop shortcut it creates."}},
       {"@type":"Question","name":"Which phones are supported?","acceptedAnswer":{"@type":"Answer","text":"iOS is available now on the App Store. Android is coming soon."}},
-      {"@type":"Question","name":"How much does ZeroG cost?","acceptedAnswer":{"@type":"Answer","text":"ZeroG is free forever with ads (1 paired device). ZeroG Pro is $14.99/month for no ads, unlimited devices, and priority relay and support."}}
+      {"@type":"Question","name":"How much does ZeroG cost?","acceptedAnswer":{"@type":"Answer","text":"ZeroG is free forever with ads (1 paired device). ZeroG Pro is $12.99/month — and your first month is just $8.99 with the introductory offer — for no ads, unlimited devices, and priority relay and support."}}
     ]
   }
   </script>
+  <!-- Microsoft Clarity (session replay + heatmaps; disclosed in /privacy §7) --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xen0wwx0p0");</script>
 </head>
 <body>
 
@@ -82,7 +97,7 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
     <h1>How to connect ZeroG</h1>
     <p class="lede">ZeroG links your phone to your Antigravity AI agent. From install to your first command takes about a minute — here's the whole thing.</p>
     <div class="cta-row">
-      <a href="https://apps.apple.com/app/id6763589468" target="_blank" rel="noopener" class="btn-primary">Download on the App Store</a>
+      <a href="https://apps.apple.com/us/app/zerog-remote-for-antigravity/id6763589468" target="_blank" rel="noopener" class="btn-primary">Download on the App Store</a>
     </div>
     <p style="color:var(--muted);font-size:14px;margin-top:-8px">ZeroG for iPhone is now <b>on the App Store</b> — tap above to install it free.</p>
 
@@ -92,59 +107,45 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
       <source src="/assets/zerog-howto.mp4" type="video/mp4">
     </video>
 
-    <h2>Set up in 7 easy steps</h2>
-    <p class="section-sub">Prefer reading? Same walkthrough, every click spelled out. You'll need the ZeroG app on your phone and Antigravity installed on your computer.</p>
+    <h2>Set up in 5 easy steps</h2>
+    <p class="section-sub">Prefer reading? Same walkthrough, every click spelled out. ZeroG now walks you through setup itself — install it and follow the prompts.</p>
 
     <div class="step">
       <div class="step-num">1</div>
       <div>
-        <h3>Install ZeroG on your iPhone</h3>
-        <p>Tap <b>Download on the App Store</b> above. It opens the App Store — tap <b>Get</b> to install ZeroG free. Leave the app for now; we'll come back to the phone at step 6.</p>
+        <h3>Install the ZeroG extension in Antigravity</h3>
+        <p>On your computer, open <b>Antigravity</b> and click the <b>Extensions</b> icon in the far-left toolbar (the four little squares — or press <code>Ctrl+Shift+X</code>, <code>Cmd+Shift+X</code> on Mac). Type <b>ZeroG</b> in the search box, click <b>“ZeroG — Remote for Antigravity”</b>, then click the blue <b>Install</b> button.</p>
+        <p class="muted"><b>Can't find it in search?</b> Install the file instead: <a href="/ZeroG-for-Antigravity-3.4.2.vsix">download the .vsix</a>, then in the Extensions panel click the <code>···</code> (three dots) menu → <b>Install from VSIX…</b> → pick the file from your <b>Downloads</b> folder → <b>Install</b>.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">2</div>
       <div>
-        <h3>Download the extension file on your computer</h3>
-        <p>Click <b>Add to Antigravity</b> above. A small file called <code>ZeroG-for-Antigravity.vsix</code> lands in your <b>Downloads</b> folder. Don't double-click it — Antigravity will pick it up in the next step.</p>
+        <h3>Click “Connect my iPhone” when ZeroG greets you</h3>
+        <p>Seconds after the install, a message pops up in the corner: <b>“📡 ZeroG installed! One step left: connect your iPhone.”</b> Click <b>Connect my iPhone</b> — the setup wizard opens.</p>
+        <p class="muted">Missed the popup? Press <code>Ctrl+Shift+P</code> and run <b>ZeroG: Generate Secure Connection</b> — same wizard.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">3</div>
       <div>
-        <h3>Open the Extensions panel in Antigravity</h3>
-        <p>Open <b>Antigravity</b> and look at the <b>toolbar on the far left edge</b> of the window. Click the icon that looks like <b>four little squares</b> — that's <b>Extensions</b>. (Shortcut: press <code>Ctrl+Shift+X</code> on Windows, <code>Cmd+Shift+X</code> on Mac.) A panel slides open.</p>
+        <h3>Get the iPhone app — scan the first code</h3>
+        <p>The wizard's first screen shows a QR code. Point your <b>iPhone camera</b> at it — it opens ZeroG on the App Store. Tap <b>Get</b> to install the app free. (Already have it? Just click <b>I have the app — next step</b>.)</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">4</div>
       <div>
-        <h3>Install the file you downloaded</h3>
-        <p>At the <b>top of the Extensions panel</b>, click the <code>···</code> (three dots) menu → choose <b>Install from VSIX…</b> → your file picker opens. Go to <b>Downloads</b>, pick <code>ZeroG-for-Antigravity.vsix</code>, and click <b>Install</b>. If a blue <b>Reload</b> button appears, click it — Antigravity restarts in a few seconds.</p>
+        <h3>Pair — scan the second code</h3>
+        <p>Click <b>Generate Secure Connection</b>. A new QR appears — this one is your private, encrypted pairing code. On your iPhone open the <b>ZeroG</b> app → <b>Settings</b> → <b>Pair new device</b> → point the camera at your computer screen. It locks on in a second.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="step-num">5</div>
-      <div>
-        <h3>Open ZeroG and make your connection code</h3>
-        <p>After the reload, a <b>new ZeroG icon appears in that same left toolbar</b> — click it. The <b>ZeroG Mobile Bridge</b> panel opens. Click the big <b>Generate Secure Connection</b> button. A QR code fills the panel — leave it on screen.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">6</div>
-      <div>
-        <h3>Scan it with your phone</h3>
-        <p>Now grab your iPhone: open the <b>ZeroG</b> app → <b>Settings</b> → <b>Pair new device</b> → point the camera at the QR code on your computer screen. It locks on in a second.</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <div class="step-num">7</div>
       <div>
         <h3>You're connected</h3>
         <p>Your phone shows <b style="color:var(--green)">LIVE</b> and the desktop confirms the link. Type a message or a terminal command — it runs on your PC and the reply streams back to your phone. That's it: your AI now travels with you.</p>
@@ -153,6 +154,38 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
 
     <div class="callout">
       <b>Keep your computer awake.</b> ZeroG connects to your live Antigravity session, so your computer needs to be on with Antigravity open for your phone to reach the agent. If your PC goes to sleep, the phone will show offline until it wakes — for long sessions, set your computer to not sleep while plugged in.
+    </div>
+
+    <h2 id="approvals">Turn on phone approvals — one extra step, once</h2>
+    <p class="section-sub">When your agent asks <b>“Allow running this command?”</b>, ZeroG rings your phone with one-tap <b>Approve / Deny</b> buttons. Chat works right after pairing; approvals need this one-time desktop setup.</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Update the ZeroG extension to 3.4.1 or newer</h3>
+        <p>In Antigravity's Extensions panel, find <b>ZeroG</b> and click <b>Update</b>. From 3.4.1 the extension checks the approvals setup for you.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Look at the status bar</h3>
+        <p>At the bottom of the Antigravity window you'll see <b style="color:var(--green)">ZeroG Approvals: ON</b> — that means you're done. If it says <b style="color:#f59e0b">OFF</b>, a warning pops up shortly after launch: click <b>Fix it</b>.</p>
+        <p><b>Windows:</b> ZeroG puts a new <b>“Antigravity (ZeroG)”</b> shortcut on your Desktop — launch Antigravity from that shortcut from now on (your original shortcuts are untouched). <b>Mac:</b> ZeroG offers to relaunch Antigravity with the right settings — confirm once.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>Test it</h3>
+        <p>Ask your agent to run any terminal command. Within seconds your phone gets the 🔔 and shows <b>Approve / Deny</b> — tap Approve and watch the command run on your PC.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Approvals not reaching your phone before?</b> That was a silent setup gap in older extension versions — chat worked while approvals quietly didn't. 3.4.1 fixes it loudly: it tells you on the desktop <b>and</b> on your phone when approvals are off, and repairs the setup with one click. Full explainer: <a href="/approve-ai-agent-actions-remotely" style="color:var(--accent-2)">approving agent actions remotely</a>.
     </div>
 
     <h2>Good to know</h2>
@@ -195,6 +228,11 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
     </details>
 
     <details>
+      <summary>Chat works but approval requests never reach my phone.</summary>
+      <p>Approvals use a one-time desktop setup that chat doesn't need. Update the ZeroG extension to 3.4.1 or newer, then check the Antigravity status bar: “ZeroG Approvals: ON” means you're set; “OFF” pops a warning with a <b>Fix it</b> button that repairs the setup in one click. On Windows, launch Antigravity from the new “Antigravity (ZeroG)” Desktop shortcut it creates. See the <a href="#approvals" style="color:var(--accent-2)">phone approvals section</a> above.</p>
+    </details>
+
+    <details>
       <summary>My phone says OFFLINE — how do I fix it?</summary>
       <p>Check three things: (1) Antigravity is open on your computer with the ZeroG panel running, (2) your computer is on and connected to the internet, and (3) you scanned the most recent QR code. If it's still offline, generate a fresh code in Antigravity and re-scan it from Settings → Pair new device.</p>
     </details>
@@ -216,7 +254,7 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
 
     <details>
       <summary>How do I remove the ads?</summary>
-      <p>The free version shows an ad every few messages. Upgrading to Pro removes ads entirely and unlocks unlimited paired devices and priority speed. You can subscribe from the pricing section on the home page.</p>
+      <p>The free version shows an ad every few messages. Upgrading to Pro removes ads entirely and unlocks unlimited paired devices and priority speed. You can upgrade to Pro inside the app — it uses your Apple ID, and you can cancel anytime in your Apple ID settings.</p>
     </details>
 
     <details>
@@ -231,7 +269,7 @@ details p { font-size: 15px; line-height: 1.7; color: var(--text-2); padding: 0 
   </div>
 
   <footer class="footer">
-    <p>© 2026 ZeroG · <a href="/">Home</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="mailto:hello@zerog-ai.com">Contact</a></p>
+    <p>© 2026 ZeroG · <a href="/">Home</a> · <a href="/blog/">Guides</a> · <a href="/alternatives">Alternatives</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/contact">Contact</a></p>
   </footer>
 
 <script src="/track.js" defer></script>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Your Antigravity AI Agent Remotely — ZeroG</title>
+  <meta name="description" content="What Antigravity remote control means, how it works, and how to control your Antigravity AI agent from your phone with ZeroG, the mobile companion for the Google Antigravity IDE." />
+  <link rel="canonical" href="https://zerog-ai.com/antigravity-remote-control" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Control Your Antigravity AI Agent Remotely" />
+  <meta property="og:description" content="What Antigravity remote control means, how it works, and how to control your Antigravity AI agent from your phone." />
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://zerog-ai.com/antigravity-remote-control" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@getzerog" />
+  <meta name="twitter:title" content="Control Your Antigravity AI Agent Remotely" />
+  <meta name="twitter:description" content="What Antigravity remote control means, how it works, and how to control your Antigravity AI agent from your phone." />
+  <meta name="twitter:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Control Your Antigravity AI Agent Remotely","description":"What Antigravity remote control means, how it works, and how to control your Antigravity AI agent from your phone.","image":"https://zerog-ai.com/assets/og-image.png","datePublished":"2026-08-02","dateModified":"2026-08-02","author":{"@type":"Organization","name":"ZeroG"},"publisher":{"@type":"Organization","name":"ZeroG","logo":{"@type":"ImageObject","url":"https://zerog-ai.com/assets/app-icon.png"}},"mainEntityOfPage":"https://zerog-ai.com/antigravity-remote-control"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What does 'remote control' mean for Antigravity?","acceptedAnswer":{"@type":"Answer","text":"It means sending commands and messages to your Antigravity agent, and receiving its replies, from a device other than the computer Antigravity is running on — typically your phone — while Antigravity keeps running on your PC."}},
+  {"@type":"Question","name":"How does Antigravity remote control work?","acceptedAnswer":{"@type":"Answer","text":"A companion app, such as ZeroG, pairs to your Antigravity session with a QR code. From then on, messages you send from your phone are injected into Antigravity's chat, and terminal commands run on your PC, with output streamed back to your phone over an encrypted relay."}},
+  {"@type":"Question","name":"Can I approve or steer agent actions remotely?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can send follow-up instructions, answer the agent's questions, and run terminal commands from your phone in real time, the same way you would sitting at the keyboard."}},
+  {"@type":"Question","name":"Is it safe to remote-control Antigravity?","acceptedAnswer":{"@type":"Answer","text":"With ZeroG, your code and AI model never leave your own machine — the app only relays messages between your phone and your PC through an encrypted connection, and nothing is stored on ZeroG's servers."}},
+  {"@type":"Question","name":"What can't I do remotely?","acceptedAnswer":{"@type":"Answer","text":"Your computer has to stay on and Antigravity has to stay open — remote control reaches a running session, it doesn't start one from a cold machine. You also interact through chat and terminal, not Antigravity's full desktop editor UI."}}
+  ]}
+  </script>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#04040c;--surface:rgba(255,255,255,0.04);--surface-2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.08);--text:#f1f5f9;--text-2:rgba(241,245,249,0.7);--muted:rgba(241,245,249,0.34);--accent:#2dd4bf;--accent-2:#67e8f9;--green:#22c55e}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);background:rgba(4,4,12,0.72)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:21px;color:#04040c;letter-spacing:-1px}
+.logo-text{font-size:21px;font-weight:900;letter-spacing:-0.8px;color:var(--text)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--surface-2);border:1px solid var(--border);color:var(--text)!important;padding:8px 18px;border-radius:9px;font-weight:600!important}
+.article{max-width:740px;margin:0 auto;padding:130px 24px 70px}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--accent);text-decoration:none}
+.meta{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+.article h1{font-size:clamp(30px,4.5vw,46px);font-weight:900;letter-spacing:-1.3px;line-height:1.1;margin-bottom:22px}
+.lede{font-size:18px;line-height:1.65;color:var(--text-2);background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:18px 22px;margin-bottom:30px}
+.lede strong{color:var(--text)}
+.article h2{font-size:24px;font-weight:800;letter-spacing:-.5px;margin:38px 0 12px}
+.article h3{font-size:18px;font-weight:700;margin:24px 0 8px}
+.article p{font-size:16px;line-height:1.75;color:var(--text-2);margin-bottom:16px}
+.article ul,.article ol{margin:0 0 16px 22px}
+.article li{font-size:16px;line-height:1.7;color:var(--text-2);margin-bottom:8px}
+.article a{color:var(--accent-2);text-decoration:underline}
+.article strong{color:var(--text)}
+.cta-box{background:linear-gradient(135deg,rgba(45,212,191,0.1),rgba(103,232,249,0.05));border:1px solid rgba(45,212,191,0.25);border-radius:18px;padding:28px 30px;margin:36px 0 10px;text-align:center}
+.cta-box p{font-size:17px;color:var(--text);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),#14b8a6);color:#04241f;font-weight:800;font-size:15px;padding:13px 26px;border-radius:12px;text-decoration:none}
+.faq-list details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:0 20px;margin-bottom:12px}
+.faq-list details[open]{background:var(--surface-2)}
+.faq-list summary{font-size:16px;font-weight:600;padding:18px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--text)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';color:var(--accent);font-size:22px;font-weight:400;flex-shrink:0}
+.faq-list details[open] summary::after{content:'–'}
+.faq-list p{font-size:15px;line-height:1.7;color:var(--text-2);padding:0 0 20px;margin:0}
+.related{margin-top:14px}
+.footer{padding:40px 24px;border-top:1px solid var(--border);margin-top:50px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--text-2)}
+.disc{font-size:11px;color:var(--muted);text-align:center;max-width:700px;margin:16px auto 0;padding-top:16px;border-top:1px solid var(--border);line-height:1.6}
+@media(max-width:600px){.nav-links a:not(.nav-cta){display:none}}
+  </style>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cb9efad6dc3a477e81ec0faf9c66489c"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Microsoft Clarity (session replay + heatmaps; disclosed in /privacy §7) --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xen0wwx0p0");</script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <div class="nav-links">
+        <a href="/#how">How it works</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#download" class="nav-cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="crumb"><a href="/">← ZeroG</a></div>
+    <div class="meta">GUIDE · UPDATED AUGUST 2026</div>
+    <h1>Control Your Antigravity AI Agent Remotely</h1>
+
+    <p class="lede"><strong>Short answer:</strong> Antigravity remote control means sending commands to your desktop AI agent and getting its responses back from another device — usually your phone — while Antigravity keeps running on your computer. A mobile companion app like ZeroG pairs to your session by QR code and relays chat messages and terminal commands both ways over an encrypted connection.</p>
+
+    <h2>What does "remote control" mean for Antigravity?</h2>
+    <p>Antigravity itself doesn't move anywhere — it stays running on your PC. "Remote control" refers to a second device, connected to that same session, that can send input and receive output. You're not accessing a copy of Antigravity; you're reaching into the one that's already open on your desktop.</p>
+
+    <h2>How does Antigravity remote control work?</h2>
+    <p>With ZeroG, the mechanism is a paired, encrypted relay:</p>
+    <ol>
+      <li>The ZeroG extension runs inside Antigravity on your computer and generates a QR pairing code.</li>
+      <li>You scan that code once from the ZeroG app on your phone.</li>
+      <li>From then on, messages typed on your phone are injected into Antigravity's chat, and terminal commands run on your PC.</li>
+      <li>The agent's replies and terminal output stream back to your phone in real time.</li>
+    </ol>
+    <p>Nothing about Antigravity itself changes — ZeroG relays input and output, it doesn't modify the IDE or intercept its network traffic.</p>
+
+    <h2>Can I approve or steer agent actions remotely?</h2>
+    <p>Yes. Agentic IDEs like Antigravity often pause to ask a question or wait for direction mid-task. With remote control, you can answer, redirect, or approve the next step from your phone the moment it's needed, instead of losing time until you're back at your desk.</p>
+
+    <h2>Is it safe to remote-control Antigravity?</h2>
+    <p>Two things worth checking in any remote-control tool:</p>
+    <ul>
+      <li><strong>Where does your code and AI model actually run?</strong> With ZeroG, both stay on your own machine — the app only relays messages between your phone and PC, so your code is never stored or processed on a third-party AI service.</li>
+      <li><strong>Does it modify Antigravity?</strong> ZeroG connects to your running session and relays input/output rather than patching the app.</li>
+    </ul>
+
+    <h2>What can't I do remotely?</h2>
+    <p>Your computer has to stay on with Antigravity open — remote control reaches a live session, it can't start Antigravity on a machine that's off or asleep. You're also working through chat and terminal from your phone, not Antigravity's full desktop editor interface.</p>
+
+    <div class="cta-box">
+      <p>ZeroG is the mobile companion for the Google Antigravity IDE — available now on the App Store.</p>
+      <a href="https://apps.apple.com/us/app/zerog-remote-for-antigravity/id6763589468" target="_blank" rel="noopener" class="btn">Download on the App Store →</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <details>
+        <summary>What does "remote control" mean for Antigravity?</summary>
+        <p>It means sending commands and messages to your Antigravity agent, and receiving its replies, from a device other than the computer Antigravity is running on — typically your phone — while Antigravity keeps running on your PC.</p>
+      </details>
+      <details>
+        <summary>How does Antigravity remote control work?</summary>
+        <p>A companion app, such as ZeroG, pairs to your Antigravity session with a QR code. From then on, messages you send from your phone are injected into Antigravity's chat, and terminal commands run on your PC, with output streamed back to your phone over an encrypted relay.</p>
+      </details>
+      <details>
+        <summary>Can I approve or steer agent actions remotely?</summary>
+        <p>Yes. You can send follow-up instructions, answer the agent's questions, and run terminal commands from your phone in real time, the same way you would sitting at the keyboard.</p>
+      </details>
+      <details>
+        <summary>Is it safe to remote-control Antigravity?</summary>
+        <p>With ZeroG, your code and AI model never leave your own machine — the app only relays messages between your phone and your PC through an encrypted connection, and nothing is stored on ZeroG's servers.</p>
+      </details>
+      <details>
+        <summary>What can't I do remotely?</summary>
+        <p>Your computer has to stay on and Antigravity has to stay open — remote control reaches a running session, it doesn't start one from a cold machine. You also interact through chat and terminal, not Antigravity's full desktop editor UI.</p>
+      </details>
+    </div>
+
+    <h2 class="related">Related guides</h2>
+    <ul>
+      <li><a href="/antigravity-mobile">How to use Google Antigravity from your phone</a></li>
+      <li><a href="/alternatives">ZeroG vs. open-source Antigravity remotes</a></li>
+      <li><a href="/blog/use-antigravity-from-your-phone">The full 2026 guide to using Antigravity from your phone</a></li>
+      <li><a href="/connect">Step-by-step ZeroG setup &amp; FAQ</a></li>
+    </ul>
+  </article>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <p class="footer-copy">© 2026 ZeroG · zerog-ai.com</p>
+      <div class="footer-links">
+        <a href="/connect">Setup</a>
+        <a href="/blog/">Guides</a>
+        <a href="/alternatives">Alternatives</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+    <p class="disc">ZeroG is an independent product and is not affiliated with, endorsed by, or sponsored by Antigravity or Google DeepMind.</p>
+  </footer>
+<script src="/track.js" defer></script>
+</body>
+</html>

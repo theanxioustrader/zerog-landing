@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZeroG vs. Open-Source Antigravity Remotes — Honest Comparison</title>
+  <meta name="description" content="An honest, factual comparison of ZeroG against open-source projects that also bridge Google Antigravity to a phone — setup, cost, and what each option actually requires." />
+  <link rel="canonical" href="https://zerog-ai.com/alternatives" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ZeroG vs. Open-Source Antigravity Remotes" />
+  <meta property="og:description" content="An honest, factual comparison of ZeroG against open-source projects that also bridge Google Antigravity to a phone." />
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://zerog-ai.com/alternatives" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@getzerog" />
+  <meta name="twitter:title" content="ZeroG vs. Open-Source Antigravity Remotes" />
+  <meta name="twitter:description" content="An honest, factual comparison of ZeroG against open-source projects that also bridge Google Antigravity to a phone." />
+  <meta name="twitter:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"ZeroG vs. Open-Source Antigravity Remotes","description":"An honest, factual comparison of ZeroG against open-source projects that also bridge Google Antigravity to a phone.","image":"https://zerog-ai.com/assets/og-image.png","datePublished":"2026-08-02","dateModified":"2026-08-02","author":{"@type":"Organization","name":"ZeroG"},"publisher":{"@type":"Organization","name":"ZeroG","logo":{"@type":"ImageObject","url":"https://zerog-ai.com/assets/app-icon.png"}},"mainEntityOfPage":"https://zerog-ai.com/alternatives"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Are there free or open-source alternatives to ZeroG?","acceptedAnswer":{"@type":"Answer","text":"Yes. Several community, open-source projects mirror an Antigravity session to a phone browser over your local network. They're free and self-hosted, but typically require cloning a repository, running your own server or terminal commands, and setting up a tunnel yourself for access beyond your home Wi-Fi."}},
+  {"@type":"Question","name":"Is ZeroG open source?","acceptedAnswer":{"@type":"Answer","text":"No. ZeroG is a closed-source commercial app distributed through the App Store. It's free to use with ads and one paired device; ZeroG Pro ($12.99/month; first month $8.99) removes ads and adds unlimited paired devices."}},
+  {"@type":"Question","name":"Which should I use, ZeroG or an open-source remote?","acceptedAnswer":{"@type":"Answer","text":"If you're comfortable running your own server, configuring a tunnel, and maintaining the setup yourself, an open-source remote can work well and costs nothing. If you want a working setup in about a minute that also connects over cellular without any tunnel configuration, ZeroG is built for that."}},
+  {"@type":"Question","name":"Is ZeroG affiliated with Google or the Antigravity team?","acceptedAnswer":{"@type":"Answer","text":"No. ZeroG is an independent product and is not affiliated with, endorsed by, or sponsored by Antigravity or Google DeepMind."}}
+  ]}
+  </script>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#04040c;--surface:rgba(255,255,255,0.04);--surface-2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.08);--text:#f1f5f9;--text-2:rgba(241,245,249,0.7);--muted:rgba(241,245,249,0.34);--accent:#2dd4bf;--accent-2:#67e8f9;--green:#22c55e}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);background:rgba(4,4,12,0.72)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:21px;color:#04040c;letter-spacing:-1px}
+.logo-text{font-size:21px;font-weight:900;letter-spacing:-0.8px;color:var(--text)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--surface-2);border:1px solid var(--border);color:var(--text)!important;padding:8px 18px;border-radius:9px;font-weight:600!important}
+.article{max-width:780px;margin:0 auto;padding:130px 24px 70px}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--accent);text-decoration:none}
+.meta{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+.article h1{font-size:clamp(30px,4.5vw,46px);font-weight:900;letter-spacing:-1.3px;line-height:1.1;margin-bottom:22px}
+.lede{font-size:18px;line-height:1.65;color:var(--text-2);background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:18px 22px;margin-bottom:30px}
+.lede strong{color:var(--text)}
+.article h2{font-size:24px;font-weight:800;letter-spacing:-.5px;margin:38px 0 12px}
+.article h3{font-size:18px;font-weight:700;margin:24px 0 8px}
+.article p{font-size:16px;line-height:1.75;color:var(--text-2);margin-bottom:16px}
+.article ul,.article ol{margin:0 0 16px 22px}
+.article li{font-size:16px;line-height:1.7;color:var(--text-2);margin-bottom:8px}
+.article a{color:var(--accent-2);text-decoration:underline}
+.article strong{color:var(--text)}
+.table-wrap{overflow-x:auto;margin:20px 0 28px;border:1px solid var(--border);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--surface-2);color:var(--text);font-weight:700;font-size:13px;letter-spacing:.3px}
+td{color:var(--text-2)}
+tr:last-child td{border-bottom:none}
+td strong,th strong{color:var(--text)}
+.col-zerog{color:var(--accent);font-weight:700}
+.callout{background:rgba(45,212,191,0.07);border:1px solid rgba(45,212,191,0.2);border-radius:14px;padding:18px 20px;margin:26px 0;font-size:14px;line-height:1.6;color:var(--text-2)}
+.callout b{color:var(--text)}
+.cta-box{background:linear-gradient(135deg,rgba(45,212,191,0.1),rgba(103,232,249,0.05));border:1px solid rgba(45,212,191,0.25);border-radius:18px;padding:28px 30px;margin:36px 0 10px;text-align:center}
+.cta-box p{font-size:17px;color:var(--text);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),#14b8a6);color:#04241f;font-weight:800;font-size:15px;padding:13px 26px;border-radius:12px;text-decoration:none}
+.faq-list details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:0 20px;margin-bottom:12px}
+.faq-list details[open]{background:var(--surface-2)}
+.faq-list summary{font-size:16px;font-weight:600;padding:18px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--text)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';color:var(--accent);font-size:22px;font-weight:400;flex-shrink:0}
+.faq-list details[open] summary::after{content:'–'}
+.faq-list p{font-size:15px;line-height:1.7;color:var(--text-2);padding:0 0 20px;margin:0}
+.related{margin-top:14px}
+.footer{padding:40px 24px;border-top:1px solid var(--border);margin-top:50px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--text-2)}
+.disc{font-size:11px;color:var(--muted);text-align:center;max-width:700px;margin:16px auto 0;padding-top:16px;border-top:1px solid var(--border);line-height:1.6}
+@media(max-width:600px){.nav-links a:not(.nav-cta){display:none}}
+  </style>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cb9efad6dc3a477e81ec0faf9c66489c"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Microsoft Clarity (session replay + heatmaps; disclosed in /privacy §7) --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xen0wwx0p0");</script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <div class="nav-links">
+        <a href="/#how">How it works</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#download" class="nav-cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="crumb"><a href="/">← ZeroG</a></div>
+    <div class="meta">COMPARISON · UPDATED AUGUST 2026</div>
+    <h1>ZeroG vs. Open-Source Antigravity Remotes</h1>
+
+    <p class="lede"><strong>Short answer:</strong> Google Antigravity has no official mobile app, so two kinds of tools have emerged to fill the gap: dedicated companion apps like ZeroG, and community open-source projects that mirror your Antigravity session to a phone browser. Both connect to the same running desktop session — they differ mainly in setup effort, cost, and how they reach you outside your home network.</p>
+
+    <h2>How open-source Antigravity remotes work</h2>
+    <p>Several community projects exist that bridge Antigravity to a mobile browser over your local network. They're free and self-hosted. Setting one up typically means cloning a repository, running a local server or terminal commands, and — if you want access away from your home Wi-Fi — arranging a tunnel (for example ngrok, Tailscale or a Cloudflare Tunnel). Some projects have made this easier than others: a few now set the tunnel up for you in one click, while others still expect you to configure it yourself. Feature sets vary from project to project and change as maintainers update them, so check each project's own repository for current capabilities before relying on one.</p>
+
+    <h2>How ZeroG works</h2>
+    <p>ZeroG is a dedicated iPhone app built specifically for Antigravity. You install the ZeroG extension in Antigravity, pair your phone by scanning a QR code, and you're connected — no repository to clone, no server to run, no tunnel to configure. It connects over Wi-Fi or cellular through an encrypted relay, and your code and AI model stay on your own machine the whole time.</p>
+
+    <h2>The named alternatives (checked August 2026)</h2>
+    <p>These are the tools people actually compare ZeroG against. Every figure below was checked on 3 August 2026 against the Open VSX API, the App Store and each project's own page.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tool</th><th>What it is</th><th>Runs on</th><th>How it reaches your desktop</th><th>Cost</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong class="col-zerog">ZeroG</strong></td><td>Native iPhone app + Antigravity extension</td><td>iPhone (iOS 15.1+); Windows or macOS desktop</td><td>Scan a QR code once, then an encrypted relay — Wi-Fi or cellular, nothing to configure</td><td>Free (ad-supported); Pro $12.99/mo</td></tr>
+          <tr><td><strong>Antigravity Remote Control</strong> (hasugoii)</td><td>Extension you drive from your phone's browser</td><td>Any phone with a browser</td><td>One-click Cloudflare tunnel + QR code</td><td>Free · 61,262 installs on Open VSX</td></tr>
+          <tr><td><strong>AG Remote</strong></td><td>Native iPhone app + desktop host app</td><td>iPhone; <strong>macOS host only</strong></td><td>QR pairing, end-to-end encrypted, outbound-only connection</td><td>$49 early-adopter lifetime ($99 regular)</td></tr>
+          <tr><td><strong>AntigravityMobile</strong> (AvenalJ)</td><td>Self-hosted dashboard you run yourself</td><td>Android/browser; desktop side tested on Windows</td><td>Tailscale recommended; Cloudflare quick tunnel optional</td><td>Free · MIT open source · 155 stars</td></tr>
+          <tr><td><strong>Mobile IDE for Antigravity AI</strong></td><td>Native iPhone app + desktop extension</td><td>iPhone, <strong>requires iOS 18.6+</strong></td><td>Desktop extension, internet on both ends</td><td>Free · 4.38★ from 21 ratings</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <b>Where ZeroG is genuinely different:</b> it's the only option here that is a native iPhone app <em>and</em> works with a Windows desktop <em>and</em> is free to start. It also supports iPhones back to iOS 15.1, where the other native iOS app requires iOS 18.6.
+      <br><br>
+      <b>Where it isn't:</b> ZeroG is closed source — AntigravityMobile is MIT-licensed, and if you want to audit exactly what runs on your machine, that matters. ZeroG is also not the most-installed option: hasugoii's browser-based remote has far more installs today, and its Cloudflare tunnel is now one click, so "tunnels are hard to set up" is no longer a fair criticism of it.
+    </div>
+
+    <h2>Side-by-side</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>&nbsp;</th><th class="col-zerog">ZeroG</th><th>Open-source remotes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Setup</strong></td><td>Install app + extension, scan a QR code — about a minute</td><td>Clone a repo, run a server/terminal commands; setup time varies by project</td></tr>
+          <tr><td><strong>Access away from home Wi-Fi</strong></td><td>Built in — works over cellular out of the box</td><td>Goes through a tunnel — one click on some projects, manual setup on others</td></tr>
+          <tr><td><strong>Maintenance</strong></td><td>Updated and maintained as an App Store app</td><td>You maintain the install; depends on the project staying active</td></tr>
+          <tr><td><strong>Cost</strong></td><td>Free (ad-supported); Pro is $12.99/mo, no ads, unlimited devices</td><td>Free, self-hosted</td></tr>
+          <tr><td><strong>Support</strong></td><td>Email support, App Store reviews</td><td>Whatever the project's maintainers and community provide</td></tr>
+          <tr><td><strong>Where code/AI runs</strong></td><td>On your own machine; ZeroG only relays messages</td><td>On your own machine, same principle — verify per project</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <b>Being fair:</b> if you're comfortable maintaining your own server and tunnel, an open-source remote costs nothing and gives you full control of the code. ZeroG trades that DIY flexibility for a setup that works in about a minute and reaches you over cellular without any extra configuration.
+    </div>
+
+    <h2>Which should you use?</h2>
+    <p>If you enjoy tinkering, already run your own tunnels, and mainly need access on your home network, an open-source remote is a reasonable, free choice. If you want it working in under a minute and reachable from anywhere without setting up infrastructure yourself, ZeroG is built for that.</p>
+
+    <div class="cta-box">
+      <p>ZeroG is the mobile companion for the Google Antigravity IDE — available now on the App Store.</p>
+      <a href="https://apps.apple.com/us/app/zerog-remote-for-antigravity/id6763589468" target="_blank" rel="noopener" class="btn">Download on the App Store →</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Are there free or open-source alternatives to ZeroG?</summary>
+        <p>Yes. Several community, open-source projects mirror an Antigravity session to a phone browser over your local network. They're free and self-hosted, but typically require cloning a repository, running your own server or terminal commands, and setting up a tunnel yourself for access beyond your home Wi-Fi.</p>
+      </details>
+      <details>
+        <summary>Is ZeroG open source?</summary>
+        <p>No. ZeroG is a closed-source commercial app distributed through the App Store. It's free to use with ads and one paired device; ZeroG Pro ($12.99/month; first month $8.99) removes ads and adds unlimited paired devices.</p>
+      </details>
+      <details>
+        <summary>Which should I use, ZeroG or an open-source remote?</summary>
+        <p>If you're comfortable running your own server, configuring a tunnel, and maintaining the setup yourself, an open-source remote can work well and costs nothing. If you want a working setup in about a minute that also connects over cellular without any tunnel configuration, ZeroG is built for that.</p>
+      </details>
+      <details>
+        <summary>Is ZeroG affiliated with Google or the Antigravity team?</summary>
+        <p>No. ZeroG is an independent product and is not affiliated with, endorsed by, or sponsored by Antigravity or Google DeepMind.</p>
+      </details>
+    </div>
+
+    <h2 class="related">Related guides</h2>
+    <ul>
+      <li><a href="/antigravity-mobile">How to use Google Antigravity from your phone</a></li>
+      <li><a href="/antigravity-remote-control">Control your Antigravity AI agent remotely</a></li>
+      <li><a href="/blog/use-antigravity-from-your-phone">The full 2026 guide to using Antigravity from your phone</a></li>
+      <li><a href="/connect">Step-by-step ZeroG setup &amp; FAQ</a></li>
+    </ul>
+  </article>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <p class="footer-copy">© 2026 ZeroG · zerog-ai.com</p>
+      <div class="footer-links">
+        <a href="/connect">Setup</a>
+        <a href="/blog/">Guides</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+    <p class="disc">ZeroG is an independent product and is not affiliated with, endorsed by, or sponsored by Antigravity or Google DeepMind.</p>
+  </footer>
+<script src="/track.js" defer></script>
+</body>
+</html>

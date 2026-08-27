@@ -4,11 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — ZeroG</title>
-  <meta name="description" content="ZeroG Privacy Policy" />
+  <meta name="description" content="Privacy Policy for ZeroG, the mobile companion for the Google Antigravity IDE. Your code and AI model stay on your own machine." />
+  <link rel="canonical" href="https://zerog-ai.com/privacy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Privacy Policy — ZeroG" />
+  <meta property="og:description" content="Privacy Policy for ZeroG, the mobile companion for the Google Antigravity IDE." />
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://zerog-ai.com/privacy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@getzerog" />
+  <meta name="twitter:title" content="Privacy Policy — ZeroG" />
+  <meta name="twitter:description" content="Privacy Policy for ZeroG, the mobile companion for the Google Antigravity IDE." />
+  <meta name="twitter:image" content="https://zerog-ai.com/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cb9efad6dc3a477e81ec0faf9c66489c"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Microsoft Clarity (session replay + heatmaps; disclosed in /privacy §7) --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xen0wwx0p0");</script>
 </head>
 <body>
   <nav class="nav">
@@ -28,7 +42,7 @@
       <div class="legal-header">
         <div class="section-label">LEGAL</div>
         <h1 class="legal-title">Privacy Policy</h1>
-        <p class="legal-date">Last updated: June 25, 2026</p>
+        <p class="legal-date">Last updated: August 27, 2026</p>
       </div>
 
       <div class="legal-body">
@@ -62,7 +76,6 @@
         <ul>
           <li><strong>Cloudflare</strong> — hosting and relay infrastructure. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a></li>
           <li><strong>Microsoft Clarity</strong> — anonymous website analytics, heatmaps and session replay (see section 7). <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Privacy Policy</a></li>
-          <li><strong>PostHog</strong> — product analytics, heatmaps and session replay (see section 7). <a href="https://posthog.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
           <li><strong>Sentry</strong> — anonymous crash &amp; error reporting. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
           <li><strong>Google AdMob</strong> — serves ads in the free version of the app. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
         </ul>
@@ -75,15 +88,22 @@
         <h2>7. Website Analytics (zerog-ai.com)</h2>
         <p>Our website (separate from the app) collects <strong>anonymous, aggregate analytics</strong> so we can understand how people find and use the site. This includes: pages viewed, links and buttons clicked, how far down a page you scroll, time on page, whether a video was played, your referrer and any campaign tag, your device, browser and operating system, language, and your <strong>approximate location</strong> (city/country, derived from your IP at our edge — we do not store your IP or precise GPS location).</p>
         <p>To tell repeat visits apart we store a <strong>random, first-party identifier</strong> in your browser. It is not linked to your name, email, or any personal identity, it is never shared, and it is <strong>not used to track you across other websites</strong>. This data is stored in our own Cloudflare database and used only in aggregate. To opt out, you can block analytics with a browser extension or your browser's tracking-prevention setting.</p>
-        <p>We also use <strong>Microsoft Clarity</strong> and <strong>PostHog</strong> to capture aggregated, anonymized usage through behavioral metrics, heatmaps, and <strong>session replay</strong> (a reconstructed recording of mouse movement, clicks, scrolling and pages visited — text input is masked by default). This helps us understand and improve the site. These tools do not capture your typed personal information. See the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a> and <a href="https://posthog.com/privacy" target="_blank" rel="noopener">PostHog Privacy Policy</a>.</p>
+        <p>We also use <strong>Microsoft Clarity</strong> to capture aggregated, anonymized usage through behavioral metrics, heatmaps, and <strong>session replay</strong> (a reconstructed recording of mouse movement, clicks, scrolling and pages visited — text input is masked by default). This helps us understand and improve the site. This tool does not capture your typed personal information. See the <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</p>
 
-        <h2>8. Children's Privacy</h2>
+        <h2>8. App Analytics (in the ZeroG app)</h2>
+        <p>Separately from the website, the ZeroG app records <strong>which steps of setup you reach</strong>, so we can see where connecting a phone to a desktop breaks. This is counting, not content: it tells us <em>that</em> a step was reached, never <em>what</em> you did or said.</p>
+        <p>The complete list of what is recorded: the app was opened; the pairing scanner was opened; a pairing code was unreadable or was rejected as untrusted; pairing details were saved, or failed to save; the phone successfully reached your desktop; an approval request was shown; an approval was answered. Nothing else.</p>
+        <p>Each record carries only: a <strong>random identifier generated on your device when you install the app</strong> (not your device ID, not your advertising ID, and not derived from anything about you or your hardware), the step name, a short label such as &ldquo;approve&rdquo; or &ldquo;reject&rdquo;, the app version, whether you are on iOS or Android, your <strong>country</strong> (derived at our edge &mdash; <strong>your IP address is not stored</strong>), and the time.</p>
+        <p>It never sends your messages or prompts, terminal output, file or project names, commands, your relay URL, your workspace ID, any token or password, your name, or your email address. This data is stored in our own Cloudflare database, used only in aggregate to improve setup, and is never sold or shared with data brokers or advertisers.</p>
+        <p><strong>You can turn this off.</strong> Open <strong>Settings &rarr; Privacy</strong> in the app and switch off <strong>&ldquo;Share anonymous usage.&rdquo;</strong> Nothing is sent after that.</p>
+
+        <h2>9. Children's Privacy</h2>
         <p>ZeroG is not directed at children under 13. We do not knowingly collect data from children.</p>
 
-        <h2>9. Changes to This Policy</h2>
+        <h2>10. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the date at the top of this page.</p>
 
-        <h2>10. Contact</h2>
+        <h2>11. Contact</h2>
         <p>Questions about this Privacy Policy? Email us at <a href="mailto:hello@zerog-ai.com">hello@zerog-ai.com</a>.</p>
       </div>
     </div>
@@ -98,9 +118,11 @@
         </div>
         <p class="footer-copy">© 2026 ZeroG · zerog-ai.com</p>
         <div class="footer-links">
-          <a href="/privacy.html">Privacy</a>
-          <a href="/terms.html">Terms</a>
-          <a href="mailto:hello@zerog-ai.com">Contact</a>
+          <a href="/">Home</a>
+          <a href="/blog/">Guides</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/contact">Contact</a>
         </div>
       </div>
     </div>

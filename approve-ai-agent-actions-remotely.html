@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Approve AI Agent Actions When You're Away From Your Desk (2026) — ZeroG</title>
+  <meta name="description" content="AI coding agents pause and wait for your approval — and if you're away, they wait for hours. Here's how to answer, approve, and redirect an agent from your phone, including for the Google Antigravity IDE." />
+  <link rel="canonical" href="https://zerog-ai.com/approve-ai-agent-actions-remotely" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Approve AI Agent Actions When You're Away From Your Desk" />
+  <meta property="og:description" content="How to answer, approve, and redirect an AI coding agent from your phone, including for the Google Antigravity IDE." />
+  <meta property="og:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://zerog-ai.com/approve-ai-agent-actions-remotely" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@getzerog" />
+  <meta name="twitter:title" content="How to Approve AI Agent Actions When You're Away From Your Desk" />
+  <meta name="twitter:description" content="How to answer, approve, and redirect an AI coding agent from your phone, including for the Google Antigravity IDE." />
+  <meta name="twitter:image" content="https://zerog-ai.com/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How to Approve AI Agent Actions When You're Away From Your Desk","description":"How to answer, approve, and redirect an AI coding agent from your phone, including for the Google Antigravity IDE.","image":"https://zerog-ai.com/assets/og-image.png","datePublished":"2026-08-05","dateModified":"2026-08-12","author":{"@type":"Organization","name":"ZeroG"},"publisher":{"@type":"Organization","name":"ZeroG","logo":{"@type":"ImageObject","url":"https://zerog-ai.com/assets/app-icon.png"}},"mainEntityOfPage":"https://zerog-ai.com/approve-ai-agent-actions-remotely"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ZeroG: Remote for Antigravity","alternateName":"ZeroG","applicationCategory":"DeveloperApplication","operatingSystem":"iOS 15.1+","description":"ZeroG is the mobile companion for the Google Antigravity AI IDE. It requires the desktop Antigravity IDE to be running — ZeroG does not work standalone. Send commands, run terminal commands, and watch your AI agent's responses stream live from your phone.","url":"https://zerog-ai.com/","downloadUrl":"https://apps.apple.com/us/app/id6763589468","image":"https://zerog-ai.com/assets/og-image.png","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD","description":"Full access, ad-supported. 1 paired device."},{"@type":"Offer","name":"Pro","price":"12.99","priceCurrency":"USD","description":"No ads, unlimited devices, priority relay & support."}],"publisher":{"@type":"Organization","name":"ZeroG"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"How do I approve AI agent actions when I'm away from my desk?","acceptedAnswer":{"@type":"Answer","text":"Use a companion app that connects your phone to the IDE session running on your computer. When the agent pauses with a question or a proposed action, the request appears on your phone, and your reply goes straight back into the agent's chat — so the agent continues instead of waiting hours for you to return. For the Google Antigravity IDE, ZeroG does this from an iPhone."}},
+  {"@type":"Question","name":"Why do AI coding agents stop and wait for approval?","acceptedAnswer":{"@type":"Answer","text":"Agentic IDEs deliberately pause before consequential steps — ambiguous decisions, destructive commands, or scope changes — and ask you to confirm or choose. It's a safety feature, but it means an unattended agent can sit idle from the moment it asks until the moment you answer."}},
+  {"@type":"Question","name":"Can I approve Antigravity agent actions from my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. ZeroG connects to your running desktop Antigravity session, streams the agent's questions to your iPhone the moment they're asked, and sends your answer back into Antigravity's chat — over Wi-Fi or cellular, from anywhere."}},
+  {"@type":"Question","name":"Can I also stop an agent remotely, not just approve it?","acceptedAnswer":{"@type":"Answer","text":"Yes. Because your messages land in the live session, you can tell the agent to stop, change direction, or skip a step, and you can run terminal commands on your computer from the phone — the same control you'd have at the keyboard."}},
+  {"@type":"Question","name":"Is remote approval safe?","acceptedAnswer":{"@type":"Answer","text":"The mechanics matter: with ZeroG, your code and AI model never leave your machine, the phone-to-desktop link is an encrypted relay, and only devices you've explicitly paired can reach your session. Approving a step from your phone is the same action as approving it at your desk — just sooner."}},
+  {"@type":"Question","name":"Why aren't approval requests showing on my phone?","acceptedAnswer":{"@type":"Answer","text":"Chat can work while approvals stay silent — they use different plumbing. Approval detection needs a one-time desktop setup that older versions of the extension skipped without telling you. Update the ZeroG extension to 3.4.1 or newer: the Antigravity status bar then shows ZeroG Approvals ON/OFF, and if it's OFF a Fix-it button repairs the setup in one click (on Windows it creates an Antigravity (ZeroG) Desktop shortcut — launch from that one)."}}
+  ]}
+  </script>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#04040c;--surface:rgba(255,255,255,0.04);--surface-2:rgba(255,255,255,0.07);--border:rgba(255,255,255,0.08);--text:#f1f5f9;--text-2:rgba(241,245,249,0.7);--muted:rgba(241,245,249,0.34);--accent:#2dd4bf;--accent-2:#67e8f9;--green:#22c55e}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);background:rgba(4,4,12,0.72)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent-2));border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:21px;color:#04040c;letter-spacing:-1px}
+.logo-text{font-size:21px;font-weight:900;letter-spacing:-0.8px;color:var(--text)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--surface-2);border:1px solid var(--border);color:var(--text)!important;padding:8px 18px;border-radius:9px;font-weight:600!important}
+.article{max-width:740px;margin:0 auto;padding:130px 24px 70px}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:18px}
+.crumb a{color:var(--accent);text-decoration:none}
+.meta{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+.article h1{font-size:clamp(30px,4.5vw,46px);font-weight:900;letter-spacing:-1.3px;line-height:1.1;margin-bottom:22px}
+.lede{font-size:18px;line-height:1.65;color:var(--text-2);background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:12px;padding:18px 22px;margin-bottom:30px}
+.lede strong{color:var(--text)}
+.article h2{font-size:24px;font-weight:800;letter-spacing:-.5px;margin:38px 0 12px}
+.article h3{font-size:18px;font-weight:700;margin:24px 0 8px}
+.article p{font-size:16px;line-height:1.75;color:var(--text-2);margin-bottom:16px}
+.article ul,.article ol{margin:0 0 16px 22px}
+.article li{font-size:16px;line-height:1.7;color:var(--text-2);margin-bottom:8px}
+.article a{color:var(--accent-2);text-decoration:underline}
+.article strong{color:var(--text)}
+.cta-box{background:linear-gradient(135deg,rgba(45,212,191,0.1),rgba(103,232,249,0.05));border:1px solid rgba(45,212,191,0.25);border-radius:18px;padding:28px 30px;margin:36px 0 10px;text-align:center}
+.cta-box p{font-size:17px;color:var(--text);margin-bottom:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),#14b8a6);color:#04241f;font-weight:800;font-size:15px;padding:13px 26px;border-radius:12px;text-decoration:none}
+.faq-list details{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:0 20px;margin-bottom:12px}
+.faq-list details[open]{background:var(--surface-2)}
+.faq-list summary{font-size:16px;font-weight:600;padding:18px 0;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--text)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'+';color:var(--accent);font-size:22px;font-weight:400;flex-shrink:0}
+.faq-list details[open] summary::after{content:'–'}
+.faq-list p{font-size:15px;line-height:1.7;color:var(--text-2);padding:0 0 20px;margin:0}
+.related{margin-top:14px}
+.update-box{background:linear-gradient(135deg,rgba(34,197,94,0.14),rgba(45,212,191,0.07));border:1px solid rgba(34,197,94,0.4);border-left:4px solid var(--green);border-radius:14px;padding:20px 24px;margin:0 0 30px;font-size:16px;line-height:1.7;color:var(--text-2)}
+.update-box strong{color:var(--text);font-size:17px}
+.shot-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin:26px 0 10px}
+.shot{flex:1 1 240px;max-width:300px;margin:0}
+.shot img{width:100%;border-radius:22px;border:1px solid var(--border);display:block}
+.shot figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:9px;line-height:1.5}
+.setup-video{width:100%;border-radius:16px;border:1px solid var(--border);margin:10px 0 6px;display:block;background:#000}
+.chip-demo{display:inline-block;font-size:13px;font-weight:700;padding:3px 10px;border-radius:6px;vertical-align:1px}
+.chip-on{background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.45);color:var(--green)}
+.chip-off{background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.5);color:#f59e0b}
+.footer{padding:40px 24px;border-top:1px solid var(--border);margin-top:50px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-copy{font-size:13px;color:var(--muted)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--text-2)}
+.disc{font-size:11px;color:var(--muted);text-align:center;max-width:700px;margin:16px auto 0;padding-top:16px;border-top:1px solid var(--border);line-height:1.6}
+@media(max-width:600px){.nav-links a:not(.nav-cta){display:none}}
+  </style>
+  <!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "cb9efad6dc3a477e81ec0faf9c66489c"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Microsoft Clarity (session replay + heatmaps; disclosed in /privacy §7) --><script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "xen0wwx0p0");</script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <div class="nav-links">
+        <a href="/#how">How it works</a>
+        <a href="/#features">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#download" class="nav-cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="crumb"><a href="/">← ZeroG</a></div>
+    <div class="meta">GUIDE · UPDATED AUGUST 2026</div>
+    <h1>How to Approve AI Agent Actions When You're Away From Your Desk</h1>
+
+    <p class="lede"><strong>Short answer:</strong> put the agent's questions on your phone. A companion app connects to the IDE session running on your computer; when the agent pauses for a decision, the question appears on your phone and your answer goes straight back into the agent's chat — so work continues in seconds instead of stalling until you're back. For the Google Antigravity IDE, ZeroG is the companion that does this from an iPhone.</p>
+
+    <div class="update-box">
+      <strong>📣 August 2026 update — one-tap approvals are live.</strong><br>
+      When your Antigravity agent asks <em>“Allow running this command?”</em>, ZeroG now puts real <strong>Approve / Deny buttons on your phone</strong> — no typing needed. And if approval requests were <strong>never reaching your phone</strong> while chat worked fine: that was a silent setup gap in older versions of the desktop extension. <strong>Bridge 3.4.1 fixes it loudly</strong> — it tells you when approvals are off and repairs the setup with one click. Update the extension and follow the <a href="#setup">one-time setup below</a>.
+    </div>
+
+    <h2>Why agents stop and wait for you</h2>
+    <p>Agentic IDEs are deliberately cautious. Before an ambiguous or consequential step — deleting files, changing an API contract, expanding scope beyond what you asked — the agent pauses and asks. That's exactly the behavior you want. The cost shows up when you're not there: the agent asks at 12:04, you see it at 2:30, and the two-and-a-half hours in between produced nothing.</p>
+    <p>People try to solve this by making agents ask <em>less</em> — looser permissions, auto-approve-everything settings. That trades a scheduling problem for a safety problem. The better fix is to keep the approval step and remove the requirement that you be at your desk for it.</p>
+
+    <h2>What "approving remotely" needs to include</h2>
+    <p>A useful remote-approval setup gives you three abilities, not one:</p>
+    <ul>
+      <li><strong>See the question in context.</strong> Not just "the agent needs input" — the actual question, plus the chat history and terminal output around it, so you can judge the answer.</li>
+      <li><strong>Reply into the live session.</strong> Your "yes, but skip the migration" has to land in the agent's chat as if you'd typed it at the keyboard.</li>
+      <li><strong>Say no with force.</strong> Sometimes the right response isn't approval — it's "stop" or a redirect. Remote control that can only say yes isn't control.</li>
+    </ul>
+
+    <h2>Doing it with Antigravity and ZeroG</h2>
+    <p>Antigravity is desktop-only, so remote approval works through a companion. <a href="/">ZeroG</a> is an iPhone app plus an extension that runs inside Antigravity on your computer. Once <a href="/connect">paired (about a minute)</a>, the flow looks like this:</p>
+    <ol>
+      <li><strong>The agent pauses with a question</strong> in Antigravity's chat on your desktop.</li>
+      <li><strong>The question streams to your phone</strong> in real time, along with the surrounding conversation and live terminal output, so you have the context to decide.</li>
+      <li><strong>You answer from the phone</strong> — for permission dialogs you get one-tap <strong>Approve / Deny buttons</strong> (plus a 🔔 notification the moment the agent asks); for open questions you reply in chat — approve, choose an option, add a condition, or redirect. Your answer is injected into Antigravity and the agent carries on.</li>
+      <li><strong>You watch the result</strong> stream back: the agent's next steps, and the terminal output that proves they worked.</li>
+    </ol>
+    <p>This works over Wi-Fi or cellular from anywhere, as long as your computer is on with Antigravity open. ZeroG is a <strong>companion that connects to the Google Antigravity IDE</strong> — it doesn't run agents on its own, and your code and AI model stay on your machine; ZeroG only relays messages over an encrypted connection.</p>
+
+    <div class="shot-row">
+      <figure class="shot">
+        <img src="/assets/screen-chat.png" alt="ZeroG on iPhone: the Antigravity agent asks a question and the user approves it from the phone" loading="lazy" width="1284" height="2778">
+        <figcaption>The agent asks — you answer from anywhere, and it keeps working.</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="/assets/screen-terminal.png" alt="ZeroG on iPhone: live terminal output streaming from the desktop" loading="lazy" width="1284" height="2778">
+        <figcaption>Watch the result stream back live, straight from your PC's terminal.</figcaption>
+      </figure>
+    </div>
+
+    <h2 id="setup">Turn on one-tap approvals — one-time setup</h2>
+    <p>Chat works the moment you pair. <strong>Approvals need one extra one-time step on the desktop</strong>, because detecting Antigravity's permission dialogs uses the IDE's own debug channel — and the IDE has to be started with that channel on. Since <strong>bridge 3.4.1</strong>, the extension handles this for you:</p>
+    <ol>
+      <li><strong>Update the ZeroG extension</strong> in Antigravity to <strong>3.4.1 or newer</strong> (Extensions panel → ZeroG → Update).</li>
+      <li><strong>Glance at the status bar</strong> (bottom of the Antigravity window). <span class="chip-demo chip-on">ZeroG Approvals: ON</span> means you're done — phone approvals are live.</li>
+      <li>If it shows <span class="chip-demo chip-off">ZeroG Approvals: OFF</span>, a warning appears shortly after launch — click <strong>Fix it</strong>.
+        <ul>
+          <li><strong>Windows:</strong> ZeroG puts a new <strong>“Antigravity (ZeroG)”</strong> shortcut on your Desktop — launch Antigravity from that shortcut from now on. Your original shortcuts are untouched.</li>
+          <li><strong>Mac:</strong> ZeroG offers to relaunch Antigravity with the right settings — confirm once and you're set.</li>
+        </ul>
+      </li>
+      <li><strong>Test it:</strong> ask the agent to run any terminal command. Your phone should ring with the 🔔 and show Approve / Deny within seconds.</li>
+    </ol>
+    <p>Until the setup is done, ZeroG now says so plainly — on the desktop <em>and</em> on your phone — instead of failing silently like older versions could.</p>
+
+    <h3>Watch the full setup (2 minutes)</h3>
+    <video class="setup-video" controls preload="metadata" playsinline poster="/assets/og-image.png">
+      <source src="/assets/zerog-howto.mp4" type="video/mp4">
+    </video>
+
+    <h2>A sane approval habit for unattended runs</h2>
+    <ul>
+      <li><strong>Keep confirmations on for destructive actions.</strong> Remote approval means you don't need to loosen them to keep the agent moving.</li>
+      <li><strong>Answer with constraints, not just "yes."</strong> "Yes — but only in the api/ folder" from your phone saves a cleanup later.</li>
+      <li><strong>Check in at natural boundaries.</strong> After tests pass or a step completes is the cheap moment to glance at your phone and confirm the direction.</li>
+      <li><strong>Don't approve what you can't read.</strong> If the question needs a real code review, tell the agent to hold until you're back at the desk — that's an answer too, and it beats a blind yes.</li>
+    </ul>
+
+    <div class="cta-box">
+      <p>ZeroG is the mobile companion for the Google Antigravity IDE — available now on the App Store.</p>
+      <a href="https://apps.apple.com/us/app/id6763589468" target="_blank" rel="noopener" class="btn">Download on the App Store →</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="faq-list">
+      <details>
+        <summary>How do I approve AI agent actions when I'm away from my desk?</summary>
+        <p>Use a companion app that connects your phone to the IDE session running on your computer. When the agent pauses with a question or a proposed action, the request appears on your phone, and your reply goes straight back into the agent's chat — so the agent continues instead of waiting hours for you to return. For the Google Antigravity IDE, ZeroG does this from an iPhone.</p>
+      </details>
+      <details>
+        <summary>Why do AI coding agents stop and wait for approval?</summary>
+        <p>Agentic IDEs deliberately pause before consequential steps — ambiguous decisions, destructive commands, or scope changes — and ask you to confirm or choose. It's a safety feature, but it means an unattended agent can sit idle from the moment it asks until the moment you answer.</p>
+      </details>
+      <details>
+        <summary>Can I approve Antigravity agent actions from my phone?</summary>
+        <p>Yes. ZeroG connects to your running desktop Antigravity session, streams the agent's questions to your iPhone the moment they're asked, and sends your answer back into Antigravity's chat — over Wi-Fi or cellular, from anywhere.</p>
+      </details>
+      <details>
+        <summary>Can I also stop an agent remotely, not just approve it?</summary>
+        <p>Yes. Because your messages land in the live session, you can tell the agent to stop, change direction, or skip a step, and you can run terminal commands on your computer from the phone — the same control you'd have at the keyboard.</p>
+      </details>
+      <details>
+        <summary>Is remote approval safe?</summary>
+        <p>The mechanics matter: with ZeroG, your code and AI model never leave your machine, the phone-to-desktop link is an encrypted relay, and only devices you've explicitly paired can reach your session. Approving a step from your phone is the same action as approving it at your desk — just sooner.</p>
+      </details>
+      <details>
+        <summary>Why aren't approval requests showing on my phone?</summary>
+        <p>Chat can work while approvals stay silent — they use different plumbing. Approval detection needs a one-time desktop setup that older versions of the extension skipped without telling you. Update the ZeroG extension to <strong>3.4.1 or newer</strong>: the Antigravity status bar then shows “ZeroG Approvals: ON / OFF”, and if it's OFF a <strong>Fix it</strong> button repairs the setup in one click (on Windows it creates an “Antigravity (ZeroG)” Desktop shortcut — launch from that one). Also keep the ZeroG app open in the foreground the first time you test — see the <a href="#setup">one-time setup</a> above.</p>
+      </details>
+    </div>
+
+    <h2 class="related">Related guides</h2>
+    <ul>
+      <li><a href="/monitor-ai-agent-remotely">How to monitor a long-running AI coding agent remotely</a></li>
+      <li><a href="/antigravity-remote-control">Control your Antigravity AI agent remotely</a></li>
+      <li><a href="/antigravity-on-iphone">Google Antigravity IDE on iPhone — what works today</a></li>
+      <li><a href="/connect">Step-by-step ZeroG setup &amp; FAQ</a></li>
+    </ul>
+  </article>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="nav-logo"><span class="logo-mark">Z</span><span class="logo-text">ZeroG</span></a>
+      <p class="footer-copy">© 2026 ZeroG · zerog-ai.com</p>
+      <div class="footer-links">
+        <a href="/connect">Setup</a>
+        <a href="/blog/">Guides</a>
+        <a href="/alternatives">Alternatives</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+    <p class="disc">ZeroG is an independent product and is not affiliated with, endorsed by, or sponsored by Antigravity or Google DeepMind.</p>
+  </footer>
+<script src="/track.js" defer></script>
+</body>
+</html>
