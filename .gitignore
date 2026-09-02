@@ -16,3 +16,4 @@ Thumbs.db
 # OneDrive sync-conflict copies — these caused a near-rollback of the live site
 # on 2026-08-27. The real files carry the current content; never commit these.
 *-Akiva.*
+flight-*.html
